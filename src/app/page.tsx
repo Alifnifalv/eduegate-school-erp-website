@@ -1,9 +1,35 @@
 import Image from "next/image";
+import { NewHeroSection } from '../components/marketing/NewHeroSection';
+// import { HeroSection } from '../components/marketing/HeroSection';
+import { SocialProof } from '../components/marketing/SocialProof';
+// import { DemosSection } from '../components/marketing/DemosSection';
+import { FeaturesSection } from '../components/marketing/FeaturesSection';
+import { PackageSection } from '../components/marketing/PackageSection';
+import { WallOfLoveSection } from '../components/marketing/WallOfLoveSection';
+import { SuccessStoriesSection } from '../components/marketing/SuccessStoriesSection';
+import { FaqSection } from '../components/marketing/FaqSection';
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    
+    // <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div >
+       <main>
+        
+         <NewHeroSection />
+      {/* <HeroSection /> */}
+      <SocialProof />
+      {/* <DemosSection /> */}
+         <FeaturesSection /> 
+           <PackageSection />
+                 <WallOfLoveSection />
+                 <SuccessStoriesSection /> 
+                 <FaqSection /> 
+      {/* <FeaturesSection /> */}
+      {/* <TechStackSection /> */}
+    </main>
+      {/* <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -97,7 +123,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }
