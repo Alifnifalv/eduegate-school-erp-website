@@ -6,7 +6,7 @@ export function HeroSection() {
     <section className="py-20 md:py-32">
       <div className="container text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
-          The World's #1{" "}
+
           <span className="bg-gradient-to-r from-blue-500 to-teal-400 text-transparent bg-clip-text">
             Bootstrap, React,
           </span>

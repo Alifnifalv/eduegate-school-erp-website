@@ -53,7 +53,7 @@ export function SocialProof() {
     <section id="brands" className="py-16 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold text-muted-foreground">
-          Trusted by the world's most innovative companies
+          Trusted by the world&apos;s most innovative companies
         </h2>
         <div className="relative mt-6">
      <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background to-transparent z-10"></div>

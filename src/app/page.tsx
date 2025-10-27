@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { NewHeroSection } from '../components/marketing/NewHeroSection';
 // import { HeroSection } from '../components/marketing/HeroSection';
 import { SocialProof } from '../components/marketing/SocialProof';

@@ -5,7 +5,7 @@ const features = [
   {
     title: "Student Information System",
     description: "A centralized hub for managing all student profiles, academic records, and personal details securely.",
-    imageUrl: "/features/theming.png", // Recommended to change these images
+    imageUrl: "/features/eduegate-mobile-app-hand.svg", // Recommended to change these images
   },
   {
     title: "Fee Management & Payments",
@@ -20,12 +20,12 @@ const features = [
   {
     title: "Parent Communication Portal",
     description: "Bridge the gap between home and school with a dedicated portal for announcements, progress reports, and direct messaging.",
-    imageUrl: "/features/forms.png",
+    imageUrl: "/features/career-portal.png",
   },
   {
     title: "Examinations & Gradebooks",
     description: "Simplify exam scheduling, manage grading, and generate comprehensive report cards with just a few clicks.",
-    imageUrl: "/features/datatables.png",
+    imageUrl: "/features/exam-online.png",
   },
   {
     title: "Library & Transport Modules",

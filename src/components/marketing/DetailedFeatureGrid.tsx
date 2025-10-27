@@ -1,5 +1,5 @@
 // src/components/marketing/DetailedFeatureGrid.tsx
-import { Users, BookOpen, DollarSign, Calendar, MessageSquare, GraduationCap, ClipboardList, Library, Bus } from 'lucide-react';
+import { Users, BookOpen, DollarSign, MessageSquare, ClipboardList, Library } from 'lucide-react';
 
 const features = [
   {

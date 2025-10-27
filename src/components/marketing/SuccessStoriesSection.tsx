@@ -55,7 +55,7 @@ export function SuccessStoriesSection() {
                       <Image
                         src={story.imageSrc}
                         alt={`${story.companyUrl} team`}
-                        layout="fill"
+                        fill
                         className="object-cover"
                       />
                     </div>
