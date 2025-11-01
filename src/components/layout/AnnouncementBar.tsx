@@ -23,7 +23,7 @@ export function AnnouncementBar() {
           href="#concepts"
           className="hidden md:inline-flex items-center justify-center whitespace-nowrap font-medium text-xs rounded-lg px-3 py-1.5 bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
         >
-                  Discover More
+                Downlode Brochure
         </Link>
       </div>
     </div>

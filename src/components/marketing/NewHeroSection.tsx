@@ -10,6 +10,7 @@ import { ThreeScene } from '../three/ThreeScene';
 import { AppRatingWidget } from '../widgets/AppRatingWidget';
 import { StatsWidget } from '../widgets/StatsWidget';
 import { MobileAppWidget } from '../widgets/MobileAppWidget';
+import { TypingText } from '../widgets/TypingText';
 
 // Data for the orbiting logos
 const marqueeLogos = [
@@ -19,6 +20,7 @@ const marqueeLogos = [
   { src: '/logos/typescript.svg', alt: 'TypeScript' },
   { src: '/logos/javascript.svg', alt: 'JavaScript' },
 ];
+
 const containerVariants: Variants = {
   hidden: {},
   visible: {
@@ -45,9 +47,28 @@ export function NewHeroSection() {
   return (
     <section className="relative border-b border-gray-200 bg-gray-50/50 py-16 lg:py-20">
     <div className="absolute top-0 left-0 w-full h-full z-0">
+      
         <Suspense fallback={<div className="w-full h-full bg-black" />}>
           {/* <ThreeBackground /> */}
             {/* <ThreeScene /> */}
+  <div
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100vh",
+      backgroundColor: "#000",
+      backgroundImage: "url('/backgrounds/white.8d3d9fa1.png')",
+      backgroundSize: "150px 150px",
+      backgroundPosition: "top",
+      backgroundRepeat: "repeat",
+      opacity: 0.05,
+      zIndex: -2,
+    }}
+  ></div>
+
+
         </Suspense>
       </div>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -61,10 +82,16 @@ export function NewHeroSection() {
             <div className="space-y-2">
               <motion.h1 variants={fadeInUp} className="text-3xl md:text-5xl font-bold leading-tight">
                 <div className="flex items-center justify-center lg:justify-start gap-4">
-                  <span>Empowering</span>
+                  <span>The</span>
                   <span className="py-2.5 text-3xl md:text-5xl font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    Education
+              <TypingText />
+                 
                   </span>
+                </div>
+              </motion.h1>
+                 <motion.h1 variants={fadeInUp} className="text-3xl md:text-5xl font-bold leading-tight">
+                <div className="flex items-center justify-center lg:justify-start gap-4">
+                  <span>Way, to Run a School.</span>
                 </div>
               </motion.h1>
               <motion.h2 variants={fadeInUp} className="text-lg lg:text-3xl font-semibold text-gray-800">
@@ -72,7 +99,7 @@ export function NewHeroSection() {
               </motion.h2>
             </div>
             <div className="rounded-xl bg-white shadow-lg border border-gray-200/80 p-5 space-y-3.5 relative w-full max-w-md">
-              <Quote className="size-6 absolute -top-3 right-4 fill-white stroke-white drop-shadow-lg" />
+              <Quote className="size-6 absolute -top-3 right-4 fill-white stroke-black drop-shadow-lg" />
               <p className="text-base text-gray-600">
                 &quot;This ERP solution has been transformative for our institution. It streamlined our operations and improved parent-teacher communication immensely. &quot;
               </p>
@@ -92,7 +119,7 @@ export function NewHeroSection() {
               </div>
               <div>
                 <div className="flex items-center gap-1 text-yellow-400">★★★★★</div>
-                <span className="font-semibold text-sm text-gray-800">Trusted by 150+ Institutions</span>
+                <span className="font-semibold text-sm text-gray-800">Trusted by 5+ Institutions</span>
               </div>
             </div>
           </motion.div>

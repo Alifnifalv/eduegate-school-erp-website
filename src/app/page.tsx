@@ -2,12 +2,19 @@
 import { NewHeroSection } from '../components/marketing/NewHeroSection';
 // import { HeroSection } from '../components/marketing/HeroSection';
 import { SocialProof } from '../components/marketing/SocialProof';
+import { AiFeatures } from '@/components/marketing/AiFeatures';
+import { InstitutionsSection } from '@/components/marketing/InstitutionsSection';
+import { MobileAppSection } from '@/components/marketing/MobileAppSection';
+import { CleanModules } from '@/components/marketing/CleanModules';
+import { FeaturedModuleSection } from '@/components/marketing/FeaturedModuleSection';
+
 // import { DemosSection } from '../components/marketing/DemosSection';
 import { FeaturesSection } from '../components/marketing/FeaturesSection';
 import { PackageSection } from '../components/marketing/PackageSection';
 import { WallOfLoveSection } from '../components/marketing/WallOfLoveSection';
 import { SuccessStoriesSection } from '../components/marketing/SuccessStoriesSection';
 import { FaqSection } from '../components/marketing/FaqSection';
+
 
 
 export default function Home() {
@@ -18,6 +25,11 @@ export default function Home() {
        <main>
         
          <NewHeroSection />
+          <AiFeatures />
+                <InstitutionsSection /> 
+          <MobileAppSection />
+          <CleanModules />
+          <FeaturedModuleSection />
       {/* <HeroSection /> */}
       <SocialProof />
       {/* <DemosSection /> */}

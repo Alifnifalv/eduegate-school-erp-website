@@ -43,9 +43,7 @@ const logos = [
   { name: 'Vue Cinemas', src: '/logos/Podar-Pearl-School-1.png', bgColor: 'bg-amber-100'  },
   { name: 'NASA', src: '/logos/american-academy-school.png' , bgColor: 'bg-sky-100'},
   { name: 'Puma', src: '/logos/qatar-aeronotical-academy.png', bgColor: 'bg-green-100' },
-  { name: 'Rolls Royce', src: '/logos/solid-rocks-academy.png', bgColor: 'bg-blue-100' },
-  { name: 'Comcast', src: '/logos/comcast.svg' },
-  { name: 'ATT', src: '/logos/att.svg' },
+  { name: 'Rolls Royce', src: '/logos/solid-rocks-academy.png', bgColor: 'bg-blue-100'  },
 ];
 
 export function SocialProof() {
@@ -53,7 +51,7 @@ export function SocialProof() {
     <section id="brands" className="py-16 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold text-muted-foreground">
-          Trusted by the world&apos;s most innovative companies
+          Trusted by top school&apos;s world wide
         </h2>
         <div className="relative mt-6">
      <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background to-transparent z-10"></div>
@@ -66,11 +64,11 @@ export function SocialProof() {
 
             {/* First render */}
             <div className="flex shrink-0 animate-marquee items-center  gap-[var(--gap)]  group-hover:[animation-play-state:paused]">
-              {logos.map((logo) => (
+              {logos.map((logo, index) => (
                   <div  key={logo.name + '1'}
                     className={`flex h-[100px] items-center justify-center rounded-3xl px-8 py-5 
                                grayscale transition-all duration-300 ease-in-out hover:grayscale-0 
-                               ${logo.bgColor}`}
+                               ${logo.bgColor} ${index === logos.length - 1 ? 'mr-10' : ''}`}
                   >
                     <Image
                       src={logo.src}

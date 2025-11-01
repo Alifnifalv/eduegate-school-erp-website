@@ -14,6 +14,7 @@ export function Header() {
           <Link href="/pricing">Pricing</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/support">Support</Link>
+          <Link href="/about">About</Link>
         </nav>
         <div className="flex items-center space-x-4">
           <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
