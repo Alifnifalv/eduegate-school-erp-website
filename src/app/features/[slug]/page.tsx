@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import { CtaSection } from '../../../components/marketing/CtaSection';
+import { DetailedFeatureList } from '@/components/marketing/DetailedFeatureList';
 
 // This function tells Next.js what pages to pre-build (optional but good for performance)
 export async function generateStaticParams() {
@@ -39,49 +40,57 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
 
   // --- Render the Page ---
   return (
-    <main>
-      {/* === HERO SECTION with background and breadcrumbs === */}
-      <section className="relative py-12 bg-green-600 text-white">
+  <main>
+      {/* === UPGRADED HERO SECTION === */}
+      <section className="relative py-20 bg-gray-900 text-white">
+         {/* Subtle Background Pattern */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url('/features/transport-header-bg.png')`}}
+          className="absolute inset-0 bg-repeat opacity-5"
+          style={{ backgroundImage: `url('/patterns/circuit-board.svg')`}}
         />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
             {feature.title}
           </h1>
-          <nav className="flex items-center text-sm font-medium mt-2">
-            <Link href="/" className="hover:underline">School ERP</Link>
+           <nav className="flex items-center justify-center text-sm font-medium mt-4">
+            <Link href="/" className="hover:underline opacity-80 hover:opacity-100">Home</Link>
             <ChevronRight className="h-4 w-4 mx-1" />
-            <span className="text-white/80">{feature.title}</span>
+             <Link href="/features" className="hover:underline opacity-80 hover:opacity-100">Features</Link>
+            <ChevronRight className="h-4 w-4 mx-1" />
+            <span className="text-white/60">{feature.title}</span>
           </nav>
         </div>
       </section>
 
-      {/* === MAIN CONTENT SECTION === */}
-      <section className="bg-background py-16 sm:py-20">
+      {/* === UPGRADED MAIN CONTENT SECTION === */}
+      <section className="bg-background py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
 
-            {/* Left Column: Image */}
-            <div className="w-full">
+            {/* Left Column: STICKY IMAGE */}
+            <div className="w-full lg:sticky lg:top-28">
               <Image
                 src={feature.imageSrc}
                 alt={feature.title}
-                width={700}
-                height={550}
-                className="rounded-lg object-contain"
+                width={800}
+                height={600}
+                className="rounded-xl object-contain shadow-2xl"
               />
             </div>
             
-            {/* Right Column: Detailed Text */}
-            <div className="space-y-6 text-gray-700">
-              <p>
-                <strong>{`Our School ERP ${feature.title}: ${feature.longDescription.split('.')[0]}.`}</strong>
-              </p>
-              <p className="text-muted-foreground">
-                {feature.longDescription.split('.').slice(1).join('.').trim()}
-              </p>
+            {/* Right Column: Detailed Text & Key Features */}
+            <div className="space-y-12">
+               <div className="space-y-4">
+                 <p className="text-lg text-gray-800">
+                    <strong>{`Our School ERP ${feature.title}: ${feature.longDescription.split('.')[0]}.`}</strong>
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.longDescription.split('.').slice(1).join('.').trim()}
+                  </p>
+               </div>
+              
+              {/* Key features will be rendered by our new Client Component */}
+              <DetailedFeatureList keyFeatures={feature.keyFeatures} />
 
               <div>
                 <h2 className="text-xl font-bold mb-4">{`Key Features of Our School ERP ${feature.title}:`}</h2>
@@ -97,6 +106,9 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
 
               <p className="text-sm italic">
                 By implementing our {feature.title}, your institution can ensure safety, security, and efficiency. Experience the benefits of a well-optimized system with our comprehensive ERP solution.
+              </p>
+              <p className="text-sm italic text-center p-6 bg-slate-50/50 rounded-lg border">
+                By implementing our {feature.title}, your institution can ensure safety, security, and efficiency. Experience the benefits of a well-optimized system.
               </p>
             </div>
           </div>
