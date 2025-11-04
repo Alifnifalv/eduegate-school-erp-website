@@ -40,7 +40,7 @@ export function CleanModules() {
             eduêgate ERP – Modular, Scalable, School-Ready
           </h2>
           <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
-            eduêgate ERP offers a comprehensive suite of modules tailored for schools, designed with a modular architecture that allows institutions to activate only the features they need—on the go. Whether you're streamlining academics, admissions, or operations, Eduêgate adapts to your workflow.
+            eduêgate ERP offers a comprehensive suite of modules tailored for schools, designed with a modular architecture that allows institutions to activate only the features they need—on the go. Whether you&apos;re streamlining academics, admissions, or operations, Eduêgate adapts to your workflow.
           </p>
         </div>
 

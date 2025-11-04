@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Settings, UserCog, Users, Gauge, ShieldCheck, Bus, UserSquare } from 'lucide-react';
+import { Settings, UserCog, Users, Gauge } from 'lucide-react';
 import Link from 'next/link';
 
 // Animation variants for Framer Motion

@@ -6,6 +6,8 @@ import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { AnnouncementBar } from '../components/layout/AnnouncementBar'; 
 
+import PageTransition from "../components/layout/PageTransition";
+
 const inter = Inter({ subsets: ["latin"] });
 
 const geistSans = Geist({
@@ -35,7 +37,7 @@ export default function RootLayout({
       >
           <AnnouncementBar /> 
           <Header />
-          {children}
+          <PageTransition>{children}</PageTransition>
           <Footer />
       </body>
     </html>

@@ -1,9 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
-import { TextureLoader } from "three";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 // --- Animated Neon Wave ---
 function NeonWave() {
@@ -45,7 +43,7 @@ function NeonWave() {
 
 // --- Background Scene ---
 export function ThreeBackground() {
-  const gridTexture = useLoader(TextureLoader, "/_next/static/media/white.8d3d9fa1.png");
+  
 
   return (
     <>

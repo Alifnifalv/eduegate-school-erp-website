@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { GLTF } from "three-stdlib";
@@ -44,12 +45,12 @@ export function ThreeScene() {
   {/* Top Right (Photo Overlay) */}
   <div className="absolute top-0 right-0 w-[40%] h-[45%] rounded-3xl z-20 overflow-hidden border-4 border-white">
     {/* Insert image here */}
-    <img src="/your-top-right-image.jpg" alt="" className="object-cover w-full h-full" />
+    <Image src="/your-top-right-image.jpg" alt="" layout="fill" objectFit="cover" />
   </div>
 
   {/* Bottom Left (School Image) */}
   <div className="absolute bottom-0 left-0 w-[28%] h-[35%] rounded-2xl z-30 overflow-hidden">
-    <img src="/your-school-image.jpg" alt="" className="object-cover w-full h-full" />
+    <Image src="/your-school-image.jpg" alt="" layout="fill" objectFit="cover" />
   </div>
   
   {/* Bottom Center (Features Box) */}
@@ -63,7 +64,7 @@ export function ThreeScene() {
 
   {/* Bottom Right (Photo & Text) */}
   <div className="absolute bottom-0 right-0 w-[37%] h-[35%] rounded-2xl overflow-hidden z-30 flex items-end p-6" style={{background: "rgba(72, 100, 174, 0.8)"}}>
-    <img src="/your-bottom-right-image.jpg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+    <Image src="/your-bottom-right-image.jpg" alt="" layout="fill" objectFit="cover" className="opacity-70" />
     <span className="relative z-10 text-white text-lg font-semibold">
       Access Your Meeting<br />Schedule and Updates
     </span>

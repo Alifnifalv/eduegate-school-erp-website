@@ -4,22 +4,10 @@ import { Quote } from 'lucide-react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { Suspense } from 'react';
-import { ThreeBackground } from './ThreeBackground'; 
-import { ThreeScene } from '../three/ThreeScene'; 
 
-import { AppRatingWidget } from '../widgets/AppRatingWidget';
-import { StatsWidget } from '../widgets/StatsWidget';
-import { MobileAppWidget } from '../widgets/MobileAppWidget';
 import { TypingText } from '../widgets/TypingText';
 
-// Data for the orbiting logos
-const marqueeLogos = [
-  { src: '/logos/tailwindcss.svg', alt: 'Tailwind CSS' },
-  { src: '/logos/react.png', alt: 'React' },
-  { src: '/logos/html.png', alt: 'HTML 5' },
-  { src: '/logos/typescript.svg', alt: 'TypeScript' },
-  { src: '/logos/javascript.svg', alt: 'JavaScript' },
-];
+
 
 const containerVariants: Variants = {
   hidden: {},
@@ -98,7 +86,7 @@ export function NewHeroSection() {
                 The All-in-One School Management System
               </motion.h2>
             </div>
-            <div className="rounded-xl bg-white shadow-lg border border-gray-200/80 p-5 space-y-3.5 relative w-full max-w-md">
+            <motion.div variants={fadeInUp} className="rounded-xl bg-white shadow-lg border border-gray-200/80 p-5 space-y-3.5 relative w-full max-w-md">
               <Quote className="size-6 absolute -top-3 right-4 fill-white stroke-black drop-shadow-lg" />
               <p className="text-base text-gray-600">
                 &quot;This ERP solution has been transformative for our institution. It streamlined our operations and improved parent-teacher communication immensely. &quot;
@@ -110,8 +98,8 @@ export function NewHeroSection() {
                   <span className="text-gray-900 font-semibold">Future Minds Academy</span>
                 </span>
               </div>
-            </div>
-            <div className="flex items-center flex-wrap justify-center lg:justify-start gap-4">
+            </motion.div>
+            <motion.div variants={fadeInUp} className="flex items-center flex-wrap justify-center lg:justify-start gap-4">
               <div className="flex -space-x-3">
                 <Image src="/users/user1.png" alt="User 1" width={48} height={48} className="rounded-full border-2 border-white shadow-md" />
                 <Image src="/users/user2.png" alt="User 2" width={48} height={48} className="rounded-full border-2 border-white shadow-md" />
@@ -121,7 +109,7 @@ export function NewHeroSection() {
                 <div className="flex items-center gap-1 text-yellow-400">★★★★★</div>
                 <span className="font-semibold text-sm text-gray-800">Trusted by 5+ Institutions</span>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
              <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -139,34 +127,7 @@ export function NewHeroSection() {
                 className="w-full h-auto"
               />
           </motion.div>
-
-
-        {/* <div className="hidden lg:flex items-center justify-center h-[500px] w-full relative">
-
-        <div className="absolute z-20 flex items-center justify-center size-36 rounded-2xl border border-gray-200 bg-white/30 shadow-2xl backdrop-blur-sm">
-         <Image src="/logos/eduegate-mini-logo.svg" alt="Logo" width={80} height={80} />
-         </div>
-           <div className="w-full h-full flex flex-col justify-center items-center gap-y-10 overflow-hidden">
-             <div className="group flex gap-x-10 animate-marquee">
-               {[...marqueeLogos, ...marqueeLogos].map((logo, index) => (
-                 <div key={index} className="flex items-center justify-center size-14 border border-gray-200 bg-white shadow-sm rounded-lg">
-                   <Image src={logo.src} alt={logo.alt} width={30} height={30} />
-                 </div>
-               ))}
-             </div>
-             <div className="group flex gap-x-10 animate-marquee-reverse">
-                {[...marqueeLogos, ...marqueeLogos].map((logo, index) => (
-                 <div key={index} className="flex items-center justify-center size-14 border border-gray-200 bg-white shadow-sm rounded-lg">
-                   <Image src={logo.src} alt={logo.alt} width={30} height={30} />
-                 </div>
-               ))}
-             </div>
-           </div>
-           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-gray-50/50 to-transparent"></div>
-           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-gray-50/50 to-transparent"></div>
-
-        </div> */}
-      </div>
+        </div>
       </div>
     </section>
   );

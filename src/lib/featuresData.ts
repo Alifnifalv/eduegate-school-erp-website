@@ -1,10 +1,9 @@
 // src/lib/featuresData.ts
 import {
   Users, Bus, Library, Calendar, DollarSign, Bell, MessageSquare, UserCheck, ShieldCheck, 
-  Presentation, FileText, HeartPulse, Puzzle, Search, Car, UserCog, Printer, Home, 
-  BarChart, ArrowRight, UserPlus, PenSquare, FileUp, FileClock, Webhook, Wrench, 
-  GalleryHorizontal, Newspaper, Star, UserRound, Award, Webcam, Server, Shield, 
-  Handshake, Album, Lightbulb, UserRoundCog, Briefcase, WebhookIcon, BookMarked, BookCopy, Fingerprint
+  Presentation, FileText, HeartPulse, Puzzle, Search, UserCog, Printer, Home, 
+  BarChart, FileUp, FileClock, Webhook, Wrench, UserPlus, 
+  GalleryHorizontal, Newspaper, Star, Briefcase, BookMarked, Shield, PenSquare
 } from 'lucide-react';
 import React from 'react';
 import { LucideProps } from 'lucide-react';

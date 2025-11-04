@@ -76,7 +76,7 @@ export function PlatformHighlights() {
             What Eduêgate Offers
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            A comprehensive, one-platform solution designed to streamline and enhance every aspect of your school's operations.
+            A comprehensive, one-platform solution designed to streamline and enhance every aspect of your school&apos;s operations.
           </p>
         </motion.div>
 

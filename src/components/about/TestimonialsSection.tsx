@@ -2,6 +2,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { motion, Variants } from 'framer-motion';
+
+// --- Animation Variants for Framer Motion ---
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const fadeInUp: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
+};
+
 // A more structured data format for our new testimonials
 const testimonialsData = [
   {
@@ -31,7 +55,13 @@ export function TestimonialsSection() {
   return (
     <section className="py-20 sm:py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <motion.div 
+          className="mx-auto max-w-2xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={fadeInUp}
+        >
           <h2 className="text-lg leading-8 text-gray-600">
             For <span className="font-bold text-gray-900">performance</span>, <span className="font-bold text-gray-900">efficiency</span>, and <span className="font-bold text-gray-900">user experience</span>.
           </h2>
@@ -46,18 +76,25 @@ export function TestimonialsSection() {
               View Our Showcase
             </Link>
           </div>
-        </div>
+        </motion.div>
         
         {/* Testimonials Grid */}
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+        <motion.div 
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
+        >
           {testimonialsData.map((testimonial) => (
-            <div 
+            <motion.div 
               key={testimonial.companyName}
+              variants={fadeInUp}
               className="flex flex-col rounded-xl border border-gray-200 bg-white p-8 shadow-sm"
             >
               {/* Quote - `flex-grow` pushes the author info to the bottom */}
               <blockquote className="flex-grow text-lg leading-8 text-gray-700">
-                <p>"{testimonial.quote}"</p>
+                <p>&quot;{testimonial.quote}&quot;</p>
               </blockquote>
 
               {/* Divider and Author Info */}
@@ -76,9 +113,9 @@ export function TestimonialsSection() {
                   </div>
                 </div>
               </footer>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

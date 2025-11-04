@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const feature = allFeaturesData.find((f) => f.slug === slug);
   if (!feature) {
-    return { title: 'Feature Not Found' };
+    notFound();
   }
   return {
     title: `${feature.title} - School ERP`,
@@ -86,7 +86,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
               <div>
                 <h2 className="text-xl font-bold mb-4">{`Key Features of Our School ERP ${feature.title}:`}</h2>
                 <ol className="list-decimal list-inside space-y-4">
-                  {feature.keyFeatures.map((point, index) => (
+                  {feature.keyFeatures.map((point) => (
                     <li key={point.title}>
                       <strong className="font-semibold text-gray-800">{`${point.title}:`}</strong>
                       <span className="ml-2 text-muted-foreground">{point.description}</span>
