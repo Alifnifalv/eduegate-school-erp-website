@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 const variants = {
-  hidden: { opacity: 0, x: -200, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
+  hidden: { opacity: 0, y: 20 },
+  enter: { opacity: 1, y: 0 },
 };
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
@@ -13,7 +13,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       initial="hidden"
       animate="enter"
       variants={variants}
-      transition={{ type: "linear" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {children}
     </motion.div>

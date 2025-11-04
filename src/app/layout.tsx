@@ -6,6 +6,7 @@ import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { AnnouncementBar } from '../components/layout/AnnouncementBar'; 
 
+import SmoothScroll from "../components/layout/SmoothScroll";
 import PageTransition from "../components/layout/PageTransition";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -37,7 +38,7 @@ export default function RootLayout({
       >
           <AnnouncementBar /> 
           <Header />
-          <PageTransition>{children}</PageTransition>
+          <SmoothScroll><PageTransition>{children}</PageTransition></SmoothScroll>
           <Footer />
       </body>
     </html>
