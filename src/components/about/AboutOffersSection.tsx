@@ -1,5 +1,10 @@
+"use client";
+
+"use client";
+
 import React from 'react';
 import { Cloud, Smartphone, Shield, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // Feature card icons as SVG components
 const FeatureIcons = {
@@ -97,14 +102,26 @@ export function AboutOffersSection() {
     <section className="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <div className="text-center mb-12 md:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-12 md:mb-16"
+        >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#144685] font-['Poppins']">
             What eduêgate offers
           </h2>
-        </div>
+        </motion.div>
 
         {/* Main Featured Card */}
-        <div className="bg-white border border-[#dbdbdb] rounded-3xl p-8 md:p-12 mb-8 md:mb-10 flex flex-col items-center text-center max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="bg-white border border-[#dbdbdb] rounded-3xl p-8 md:p-12 mb-8 md:mb-10 flex flex-col items-center text-center max-w-4xl mx-auto"
+        >
           <div className="mb-8">
             <FeatureIcons.modular />
           </div>
@@ -116,15 +133,27 @@ export function AboutOffersSection() {
               Whether you're a CBSE, British, American school, international institution, or a multi-campus group, eduêgate adapts to your needs—making it the top choice for school digital transformation.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {features.map((feature) => {
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.1 } }
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+        >
+          {features.map((feature, index) => {
             const IconComponent = FeatureIcons[feature.icon];
             return (
-              <div
+              <motion.div
                 key={feature.id}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
                 className="bg-white border border-[#dbdbdb] rounded-3xl p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="mb-8">
@@ -133,10 +162,10 @@ export function AboutOffersSection() {
                 <p className="text-base text-[#111111] font-['Poppins'] leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

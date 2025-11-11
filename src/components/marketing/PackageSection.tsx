@@ -1,6 +1,9 @@
+"use client";
+
 // src/components/marketing/PackageSection.tsx
 import { Check, Ship } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const packageIncludes = [
   "Complete Tailwind(v9) & Bootstrap(v8) packages",
@@ -23,7 +26,13 @@ export function PackageSection() {
   return (
     <section id="package" className="py-20">
       <div className="container mx-auto px-6">
-        <div className="relative overflow-hidden rounded-xl border border-border bg-muted/50 p-5 text-center shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="relative overflow-hidden rounded-xl border border-border bg-muted/50 p-5 text-center shadow-sm"
+        >
           <div className="relative z-10">
             <div className="pt-10 pb-12">
               <div className="mx-auto max-w-2xl text-center space-y-3.5">
@@ -37,31 +46,58 @@ export function PackageSection() {
             </div>
             
             {/* Background Decorative Icon */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-5 -z-10">
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="absolute inset-0 flex items-center justify-center opacity-5 -z-10"
+            >
               <Ship className="size-[500px] text-foreground" strokeWidth={0.5} />
-            </div>
+            </motion.div>
 
-            <div className="mx-auto max-w-4xl mb-12">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.05 } }
+              }}
+              className="mx-auto max-w-4xl mb-12"
+            >
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
                 {packageIncludes.map((item, index) => (
-                  <div key={index} className="flex items-center justify-start gap-2.5 text-left">
+                  <motion.div
+                    key={index}
+                    variants={{
+                      hidden: { opacity: 0, x: -20 },
+                      visible: { opacity: 1, x: 0 }
+                    }}
+                    className="flex items-center justify-start gap-2.5 text-left"
+                  >
                     <Check className="size-4 text-green-600 shrink-0" />
                     <span className="text-sm text-secondary-foreground">{item}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
               <Link
                 href="/pricing"
                 className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium text-sm text-primary-foreground border border-zinc-950/25 bg-gradient-to-t from-primary to-primary/85 shadow-md shadow-zinc-950/20 ring-1 ring-inset ring-white/20 transition-transform hover:scale-105 active:scale-95 h-10 rounded-lg px-6"
               >
                 Buy Metronic
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface StatCard {
   number: string;
@@ -38,7 +41,12 @@ export function AboutHeroSection() {
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
-          <div className="flex flex-col gap-10">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col gap-10"
+          >
             <div className="space-y-5">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#144685] font-['Poppins']">
                 About eduêgate
@@ -56,54 +64,58 @@ export function AboutHeroSection() {
             <p className="text-base md:text-lg text-[#484848] font-['Poppins'] leading-relaxed">
               eduêgate is a powerful, all-in-one School ERP system designed to simplify and optimize school operations. Recognized as one of the best ERP solutions for schools
             </p>
-          </div>
+          </motion.div>
 
           {/* Right Stats Grid */}
-          <div className="flex flex-col gap-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={{
+              visible: { transition: { staggerChildren: 0.1 } }
+            }}
+            className="flex flex-col gap-6"
+          >
             <div className="grid grid-cols-2 gap-6">
-              {/* Top Row - First two cards */}
-              <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
-                  20+
-                </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
-                  Modules
-                </p>
-              </div>
-
-              <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
-                  4+
-                </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
-                  Mobile apps
-                </p>
-              </div>
+              {stats.slice(0, 2).map((stat, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow"
+                >
+                  <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
+                    {stat.number}
+                  </p>
+                  <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center whitespace-pre-line">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              {/* Bottom Row - Last two cards */}
-              <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
-                  25+
-                </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
-                  Integrations
-                </p>
-              </div>
-
-              <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
-                  25+
-                </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
-                  On Going
-                  <br />
-                  Projects
-                </p>
-              </div>
+              {stats.slice(2, 4).map((stat, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.9 },
+                    visible: { opacity: 1, scale: 1 }
+                  }}
+                  className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow"
+                >
+                  <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
+                    {stat.number}
+                  </p>
+                  <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center whitespace-pre-line">
+                    {stat.label}
+                  </p>
+                </motion.div>
+              ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

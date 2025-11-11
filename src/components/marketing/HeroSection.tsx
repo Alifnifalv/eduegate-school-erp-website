@@ -1,12 +1,19 @@
+"use client";
+
 // src/components/marketing/HeroSection.tsx
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export function HeroSection() {
   return (
     <section className="py-20 md:py-32">
       <div className="container text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter">
-
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-6xl font-extrabold tracking-tighter"
+        >
           <span className="bg-gradient-to-r from-blue-500 to-teal-400 text-transparent bg-clip-text">
             Bootstrap, React,
           </span>
@@ -14,10 +21,15 @@ export function HeroSection() {
           <span className="bg-gradient-to-r from-teal-400 to-blue-500 text-transparent bg-clip-text">
             Vue & Laravel Admin Dashboard
           </span>
-        </h1>
-        <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground"
+        >
           A professional, feature-rich, and mobile-first admin dashboard theme, UI kit, and design system.
-        </p>
+        </motion.p>
         <div className="mt-8 flex justify-center gap-4">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
             Purchase Now

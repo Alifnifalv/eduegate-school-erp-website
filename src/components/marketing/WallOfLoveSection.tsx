@@ -1,6 +1,9 @@
+"use client";
+
 // src/components/marketing/WallOfLoveSection.tsx
 import { TestimonialCard } from "./TestimonialCard";
 import Link from "next/link";
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -45,14 +48,20 @@ export function WallOfLoveSection() {
   return (
     <section id="testimonials" className="border-t border-border py-20">
       <div className="container mx-auto px-6">
-        <div className="mx-auto max-w-2xl text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mx-auto max-w-2xl text-center mb-16"
+        >
           <h1 className="text-3xl font-semibold md:text-4xl">
             Wall of Love
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Appreciated by thousands of developers delivering the best experience for our customers since 2014.
           </p>
-        </div>
+        </motion.div>
 
         {/* Masonry Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -87,11 +96,17 @@ export function WallOfLoveSection() {
           </div>
         </div>
 
-        <div className="flex justify-center mt-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-12"
+        >
             <Link href="#" className="cursor-pointer inline-flex items-center justify-center gap-2 text-sm font-medium border border-zinc-300 dark:border-border shadow-xs shadow-zinc-950/10 h-10 px-6 rounded-lg hover:bg-zinc-100 transition-colors">
               View <span className="font-bold">8000+</span> more reviews
             </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
