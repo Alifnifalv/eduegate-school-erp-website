@@ -1,4 +1,3 @@
-
 import { AboutHeroSection } from '../../components/about/AboutHeroSection';
 import { AboutOffersSection } from '../../components/about/AboutOffersSection';
 import { AboutDevelopedBySection } from '../../components/about/AboutDevelopedBySection';
@@ -7,6 +6,7 @@ import { AboutVisionMissionCards } from '../../components/about/AboutVisionMissi
 import { TestimonialsSection } from '../../components/about/TestimonialsSection';
 import { VisionMissionSection } from '../../components/about/VisionMissionSection';
 import { PlatformHighlights } from '../../components/about/PlatformHighlights';
+import { AboutMapSection } from '../../components/about/AboutMapSection';
 
 export default function AboutPage() {
   return (
@@ -19,6 +19,7 @@ export default function AboutPage() {
       <TestimonialsSection />
       <VisionMissionSection />
       <PlatformHighlights />
+      <AboutMapSection />
     </main>
   );
 }

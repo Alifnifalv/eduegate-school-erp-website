@@ -4,6 +4,7 @@ import LiveChat from '@/components/our-support/LiveChat';
 import FAQSection from '@/components/our-support/FAQSection';
 import ContactSupport from '@/components/our-support/ContactSupport';
 import SupportCTA from '@/components/our-support/SupportCTA';
+import { RequestCallBack } from '@/components/our-support/RequestCallBack';
 
 export const metadata = {
   title: 'Support - Eduegate',
@@ -18,6 +19,7 @@ export default function SupportPage() {
       <LiveChat />
       <FAQSection />
       <ContactSupport />
+      <RequestCallBack />
       <SupportCTA />
     </main>
   );
