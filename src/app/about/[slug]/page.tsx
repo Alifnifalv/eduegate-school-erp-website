@@ -1,12 +1,10 @@
 
 import React from 'react';
 
-const AboutSlugPage = () => {
+export default function AboutSlugPage() {
   return (
     <div>
       <h1>About Page</h1>
     </div>
   );
-};
-
-export default AboutSlugPage;
+}
