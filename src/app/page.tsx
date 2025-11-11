@@ -3,6 +3,7 @@ import { NewHeroSection } from '../components/marketing/NewHeroSection';
 // import { HeroSection } from '../components/marketing/HeroSection';
 import { SocialProof } from '../components/marketing/SocialProof';
 import { AiFeatures } from '@/components/marketing/AiFeatures';
+import { WhyEduegateSection } from '@/components/marketing/WhyEduegateSection';
 import { InstitutionsSection } from '@/components/marketing/InstitutionsSection';
 import { MobileAppSection } from '@/components/marketing/MobileAppSection';
 import { CleanModules } from '@/components/marketing/CleanModules';
@@ -14,7 +15,7 @@ import { PackageSection } from '../components/marketing/PackageSection';
 import { WallOfLoveSection } from '../components/marketing/WallOfLoveSection';
 import { SuccessStoriesSection } from '../components/marketing/SuccessStoriesSection';
 import { FaqSection } from '../components/marketing/FaqSection';
-import { ProductsMaintenanceSection } from '../components/marketing/ProductsMaintenanceSection';
+// ProductsMaintenanceSection removed from homepage
 
 
 
@@ -27,9 +28,9 @@ export default function Home() {
        <main>
         
          <NewHeroSection />
-         <ProductsMaintenanceSection/>
-          <AiFeatures />
-                <InstitutionsSection /> 
+         <AiFeatures />
+                <InstitutionsSection />
+                <WhyEduegateSection /> 
           <MobileAppSection />
           <CleanModules />
           <FeaturedModuleSection />

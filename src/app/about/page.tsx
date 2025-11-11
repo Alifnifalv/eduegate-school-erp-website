@@ -1,24 +1,17 @@
-// src/app/about/page.tsx
-import React from 'react';
-import { AboutHeroSection } from '../../components/about/AboutHeroSection';
-import { AboutOffersSection } from '../../components/about/AboutOffersSection';
-import AboutDevelopedBySection from '../../components/about/AboutDevelopedBySection';
-import AboutSoftopSection from '../../components/about/AboutSoftopSection';
-import AboutVisionMissionCards from '../../components/about/AboutVisionMissionCards';
-import { TestimonialsSection } from '../../components/about/TestimonialsSection';
-import { VisionMissionSection } from '../../components/about/VisionMissionSection';
-import { PlatformHighlights } from '../../components/about/PlatformHighlights';
+// src/app/features/page.tsx
 
-export default function AboutPage() {
+
+// It's also a good practice to have a call-to-action at the end.
+import { PlatformHighlights } from "../../components/about/PlatformHighlights"; 
+import { VisionMissionSection } from '@/components/about/VisionMissionSection'; 
+import { TestimonialsSection } from '@/components/about/TestimonialsSection'; 
+// We'll create this component in the next step.
+
+export default function FeaturesPage() {
   return (
     <main>
-      <AboutHeroSection />
-      <AboutOffersSection />
-      <AboutDevelopedBySection />
-      <AboutSoftopSection />
-      <AboutVisionMissionCards />
       <TestimonialsSection />
-      <VisionMissionSection />
+<VisionMissionSection /> 
       <PlatformHighlights />
     </main>
   );

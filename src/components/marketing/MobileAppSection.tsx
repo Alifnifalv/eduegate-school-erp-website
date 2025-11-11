@@ -3,8 +3,16 @@
 
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Settings, UserCog, Users, Gauge } from 'lucide-react';
-import Link from 'next/link';
+
+// Figma asset URLs
+const imgMockup1 = "https://www.figma.com/api/mcp/asset/87185c96-c270-4545-ae43-3ac3bba1e396";
+const imgGroup = "https://www.figma.com/api/mcp/asset/20e8675e-6516-4d57-a7c4-5cc4e9eb67d0";
+const imgGroup1 = "https://www.figma.com/api/mcp/asset/0e4073aa-05e1-49a2-81a0-e0c843ecdaab";
+const imgGroup2 = "https://www.figma.com/api/mcp/asset/f4347855-fe5a-46b2-bef3-7d1ed3c9bfab";
+const imgVector = "https://www.figma.com/api/mcp/asset/bf4ba158-e45e-4414-84f3-0af8b121fc01";
+const imgApple = "https://www.figma.com/api/mcp/asset/64eef205-35d5-4396-a798-372fa644ba41";
+const imgPlaystore = "https://www.figma.com/api/mcp/asset/eaccd0eb-125e-40ac-b8db-35256d2dae6e";
+const imgPath90 = "https://www.figma.com/api/mcp/asset/23d8d038-3ad1-40c2-abc4-6f15146489a8";
 
 // Animation variants for Framer Motion
 const fadeInUp: Variants = {
@@ -21,98 +29,131 @@ const staggerContainer: Variants = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-// Data for the side icons
+// Side icons data
 const sideIcons = [
-  { Icon: Settings },
-  { Icon: UserCog },
-  { Icon: Users },
-  { Icon: Gauge },
-];
-
-// Data for the role-based access list
-const roles = [
-  "Teachers", "Admins", "Owners",
-  "Visitors", "Parents", "Bus Attenders",
-  "Students", "Security"
+  { img: imgGroup },
+  { img: imgGroup1 },
+  { img: imgGroup2 },
+  { img: imgVector },
 ];
 
 export function MobileAppSection() {
   return (
-    <section className="relative w-full bg-blue-700 text-white overflow-hidden">
-      {/* Background SVG Wave */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
-          <path fill="#0099ff" fillOpacity="0.4" d="M0,224L48,208C96,192,192,160,288,165.3C384,171,480,213,576,240C672,267,768,277,864,256C960,235,1056,181,1152,154.7C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
+    <section className="relative w-full py-16 md:py-24 overflow-hidden" style={{ backgroundColor: '#144685' }}>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        <img alt="" className="absolute max-w-none object-cover size-full" src="https://www.figma.com/api/mcp/asset/42114c7b-cceb-4152-a6f2-f07ee6de2232" />
+      </div>
+      <div className="absolute inset-0 pointer-events-none">
+        <img alt="" className="absolute max-w-none object-cover size-full" src="https://www.figma.com/api/mcp/asset/146885c2-f368-44ed-be3a-1fba7cf6ddf5" />
       </div>
 
-      {/* Decorative Foreground Circles */}
-      <div className="absolute -left-24 -bottom-24 w-72 h-72 bg-cyan-400/50 rounded-full blur-xl"></div>
-      <div className="absolute -right-24 -bottom-12 w-80 h-80 bg-cyan-400/50 rounded-full blur-2xl"></div>
-      
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-24">
+      {/* Decorative circles */}
+      <div className="absolute -left-32 top-1/2 w-96 h-96 bg-cyan-400/40 rounded-full blur-3xl"></div>
+      <div className="absolute -right-32 top-1/2 w-96 h-96 bg-cyan-400/40 rounded-full blur-3xl"></div>
+
+      <div className="relative mx-auto max-w-7xl px-52 py-16">
         <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="flex gap-12 items-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={staggerContainer}
         >
+          {/* Left Column: Phone Mockup + Side Icons */}
+          <div className="flex gap-16 items-center">
+            {/* Phone Mockup */}
+            <motion.div variants={fadeInUp} className="flex-shrink-0 w-48">
+              <div className="relative shadow-2xl">
+                <img 
+                  alt="Teachie Mobile App Mockup" 
+                  className="w-full h-auto rounded-2xl" 
+                  src={imgMockup1}
+                />
+              </div>
+            </motion.div>
 
-          {/* Left Column: Phone Image */}
-          <motion.div variants={fadeInUp}>
-            <Image 
-              src="/features/phone-app-mockup.png" // Replace with your phone mockup image
-              alt="Eduêgate Teachie Mobile App"
-              width={450}
-              height={900}
-              className="mx-auto w-[280px] h-auto md:w-[350px]"
-            />
-          </motion.div>
-
-          {/* Right Column: Text Content */}
-          <div className="flex items-start gap-4">
-            
-            {/* Side Icons */}
-            <motion.div variants={staggerContainer} className="hidden sm:flex flex-col gap-4 pt-16">
+            {/* Side Icons Column */}
+            <motion.div variants={staggerContainer} className="flex flex-col gap-3 pt-8">
               {sideIcons.map((item, index) => (
-                <motion.div key={index} variants={fadeInUp} className="bg-white/10 p-3 rounded-lg">
-                  <item.Icon className="h-6 w-6" />
+                <motion.div 
+                  key={index} 
+                  variants={fadeInUp} 
+                  className="bg-white flex items-center justify-center p-4 rounded-2xl w-20 h-20 shadow-lg"
+                >
+                  <img alt="" className="w-10 h-10 object-contain" src={item.img} />
                 </motion.div>
               ))}
             </motion.div>
-            
-            {/* Main Text Block */}
-            <motion.div variants={staggerContainer} className="space-y-6">
-              <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold">
-                edûegate Teachie
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-lg text-blue-100 max-w-md">
-                A powerful mobile app that keeps students, parents, teachers, and administrators connected—no matter where they are.
-              </motion.p>
-              
-              <motion.div variants={fadeInUp}>
-                <h3 className="font-semibold mb-3">Role based access for:</h3>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-blue-200">
-                  {roles.map((role) => (
-                    <li key={role} className="flex items-center gap-2">
-                        <span className="text-cyan-300">•</span> {role}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+          </div>
 
-              <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 pt-4">
-                 <Link href="#">
-                    <Image src="/badges/google-play-badge.svg" alt="Get it on Google Play" width={135} height={40} />
-                </Link>
-                 <Link href="#">
-                    <Image src="/badges/app-store-badge.svg" alt="Download on the App Store" width={120} height={40} />
-                </Link>
-              </motion.div>
+          {/* Right Column: Text Content */}
+          <motion.div variants={staggerContainer} className="flex-1 flex flex-col gap-10">
+            {/* Headline */}
+            <motion.h2 variants={fadeInUp} className="text-5xl font-bold text-white font-['Poppins']">
+              eduêgate Teachie
+            </motion.h2>
+
+            {/* Description */}
+            <motion.p variants={fadeInUp} className="text-lg text-white font-['Poppins'] leading-relaxed max-w-2xl">
+              A powerful mobile app that keeps students, parents, teachers, and administrators connected—no matter where they are.
+            </motion.p>
+
+            {/* Role Based Access */}
+            <motion.div variants={fadeInUp} className="flex flex-col gap-3">
+              <h3 className="text-lg font-semibold text-white font-['Poppins']">
+                Role based access for:
+              </h3>
+              
+              {/* First Row */}
+              <div className="flex gap-4 text-white font-['Poppins'] text-lg">
+                <ul className="list-disc list-inside">
+                  <li>Teachers</li>
+                </ul>
+                <ul className="list-disc list-inside">
+                  <li>Admins</li>
+                </ul>
+                <ul className="list-disc list-inside">
+                  <li>Owners</li>
+                </ul>
+                <ul className="list-disc list-inside">
+                  <li>Bus attenders</li>
+                </ul>
+                <ul className="list-disc list-inside">
+                  <li>Security</li>
+                </ul>
+              </div>
+
+              {/* Second Row */}
+              <div className="flex gap-4 text-white font-['Poppins'] text-lg">
+                <ul className="list-disc list-inside">
+                  <li>Visitors</li>
+                </ul>
+                <ul className="list-disc list-inside">
+                  <li>Parents</li>
+                </ul>
+                <ul className="list-disc list-inside">
+                  <li>Teachers</li>
+                </ul>
+                <ul className="list-disc list-inside">
+                  <li>Students</li>
+                </ul>
+              </div>
             </motion.div>
 
-          </div>
+            {/* Download Buttons */}
+            <motion.div variants={fadeInUp} className="flex gap-5 pt-4">
+              {/* Google Play Button */}
+              <a href="#" className="bg-black border border-gray-500 rounded-lg p-2 w-32 h-10 flex items-center justify-center">
+                <img alt="Get it on Google Play" className="w-full h-full object-contain" src={imgPlaystore} />
+              </a>
+              
+              {/* App Store Button */}
+              <a href="#" className="bg-black border border-gray-500 rounded-lg p-2 w-32 h-10 flex items-center justify-center">
+                <img alt="Download on the App Store" className="w-full h-full object-contain" src={imgApple} />
+              </a>
+            </motion.div>
+          </motion.div>
 
         </motion.div>
       </div>

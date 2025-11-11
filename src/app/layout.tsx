@@ -31,21 +31,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const _htmlProps = { suppressHydrationWarning: true } as any;
-
   return (
-    /* suppressHydrationWarning: guard against harmless hydration mismatches caused by dev extensions
-       or injected attributes (e.g. webcrx) that can appear in the DOM before React hydrates. */
-    <html lang="en" {..._htmlProps}>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
       >
-          <PageTransition>
-            <AnnouncementBar /> 
-            <Header />
-            <SmoothScroll>{children}</SmoothScroll>
-            <Footer />
-          </PageTransition>
+          <AnnouncementBar /> 
+          <Header />
+          <SmoothScroll><PageTransition>{children}</PageTransition></SmoothScroll>
+          <Footer />
       </body>
     </html>
   );
