@@ -2,6 +2,8 @@
 
 "use client";
 
+"use client";
+
 import React from 'react';
 import { Cloud, Smartphone, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
