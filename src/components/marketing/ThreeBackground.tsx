@@ -1,6 +1,6 @@
 "use client";
 
-import * as THREE from "three";
+import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from "@react-three/fiber";
 
 // --- Animated Neon Wave ---
