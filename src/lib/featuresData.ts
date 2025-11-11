@@ -29,7 +29,7 @@ export const allFeaturesData: Feature[] = [
     title: 'Transport Management System',
     icon: Bus,
     shortDescription: 'Ensuring student safety and transport efficiency with real-time tracking.',
-    imageSrc: '/features/transport.png',
+    imageSrc: '/features/navigations.png',
     longDescription: "Our School ERP's comprehensive transport management software is designed to streamline and enhance transportation operations. By leveraging real-time execution and GPS tracking, our system offers a seamless way to monitor and manage the school's transportation network.",
     keyFeatures: [
       { title: 'Real-Time GPS Tracking', description: 'Monitor the exact location of school buses, providing precise data to authorities and ensuring student safety.' },
