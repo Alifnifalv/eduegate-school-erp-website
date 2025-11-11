@@ -6,6 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import { Quote, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const stories = [
   {
@@ -36,16 +37,28 @@ export function SuccessStoriesSection() {
   return (
     <section id="success-stories" className="border-t border-border/60 bg-background py-20">
       <div className="container mx-auto px-6">
-        <div className="mx-auto max-w-2xl text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mx-auto max-w-2xl text-center mb-16"
+        >
           <h1 className="text-3xl font-semibold md:text-4xl">
             Success Stories
           </h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Discover how leading companies leverage Metronic to build exceptional user experiences.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mx-auto max-w-6xl relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mx-auto max-w-6xl relative"
+        >
           <div className="overflow-hidden rounded-2xl border border-border/60 shadow-sm" ref={emblaRef}>
             <div className="flex">
               {stories.map((story, index) => (
@@ -96,7 +109,7 @@ export function SuccessStoriesSection() {
                 <ArrowRight className="size-4" />
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

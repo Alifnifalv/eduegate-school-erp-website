@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronDown, Lightbulb } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface ServiceItemProps {
   title: string;
@@ -17,7 +18,13 @@ function ServiceItem({ title, description, image, index }: ServiceItemProps) {
   const isEven = index % 2 === 0;
 
   return (
-    <div className="group relative mb-6 md:mb-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="group relative mb-6 md:mb-8"
+    >
       {/* Gradient background on hover */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
       
@@ -86,7 +93,7 @@ function ServiceItem({ title, description, image, index }: ServiceItemProps) {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -128,7 +135,13 @@ export function OurServices() {
     <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col gap-4 mb-12 md:mb-16 lg:mb-20 max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-4 mb-12 md:mb-16 lg:mb-20 max-w-3xl"
+        >
           <div className="flex items-center gap-2">
             <div className="h-1 w-12 bg-blue-600 rounded-full" />
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Additional Services</span>
@@ -141,7 +154,7 @@ export function OurServices() {
           <p className="text-base md:text-lg text-gray-600 leading-relaxed">
             Beyond our core ERP platform, we offer comprehensive services to optimize your institution's technology infrastructure.
           </p>
-        </div>
+        </motion.div>
 
         {/* Services List */}
         <div className="space-y-8 md:space-y-12">
@@ -157,7 +170,13 @@ export function OurServices() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 md:mt-24 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 lg:p-16 text-center text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-16 md:mt-24 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 lg:p-16 text-center text-white"
+        >
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Ready to Transform Your Institution?</h3>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
             Schedule a consultation with our team to discuss how our services can meet your specific needs.
@@ -165,7 +184,7 @@ export function OurServices() {
           <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg hover:shadow-xl">
             Get Started Today
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

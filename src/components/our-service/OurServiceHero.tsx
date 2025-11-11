@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react';
 import { Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export function OurServiceHero() {
   return (
@@ -9,28 +12,48 @@ export function OurServiceHero() {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-700 rounded-full blur-3xl opacity-40 -z-10" />
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="inline-flex items-center gap-2 mb-6 bg-blue-700/50 backdrop-blur-sm border border-blue-600 rounded-full px-4 py-2">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 mb-6 bg-blue-700/50 backdrop-blur-sm border border-blue-600 rounded-full px-4 py-2"
+        >
           <Sparkles className="w-4 h-4 text-blue-200" />
           <span className="text-sm font-medium text-blue-100">Comprehensive Solutions</span>
-        </div>
+        </motion.div>
         
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight mb-6">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight mb-6"
+        >
           Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">Services</span>
-        </h1>
+        </motion.h1>
         
-        <p className="mt-6 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-6 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed"
+        >
           We deliver a complete School ERP platform — modular, secure and backed by
           implementation & continuous support so your institution can focus on teaching and learning.
-        </p>
+        </motion.p>
 
-        <div className="mt-8 flex flex-wrap gap-4 justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-8 flex flex-wrap gap-4 justify-center"
+        >
           <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
             Schedule Demo
           </button>
           <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
             Learn More
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

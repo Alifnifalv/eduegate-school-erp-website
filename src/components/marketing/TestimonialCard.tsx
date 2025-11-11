@@ -1,5 +1,8 @@
+"use client";
+
 // src/components/marketing/TestimonialCard.tsx
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface TestimonialCardProps {
   name: string;
@@ -10,7 +13,13 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ name, title, imageUrl, children }: TestimonialCardProps) {
   return (
-    <div className="rounded-xl bg-card border border-border shadow-sm">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="rounded-xl bg-card border border-border shadow-sm"
+    >
       <div className="p-5 grid grid-cols-[auto_1fr] gap-4 pt-6">
         <Image
           src={imageUrl}
@@ -27,6 +36,6 @@ export function TestimonialCard({ name, title, imageUrl, children }: Testimonial
           {children}
         </blockquote>
       </div>
-    </div>
+    </motion.div>
   );
 }
