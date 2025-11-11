@@ -5,20 +5,21 @@ import { DetailedFeatureGrid } from "../../components/marketing/DetailedFeatureG
 import { AlternatingFeatures } from "../../components/marketing/AlternatingFeatures";
 import { KeyFeatures } from "../../components/marketing/KeyFeatures";
 import { LearnSmarterSection } from '../../components/marketing/LearnSmarterSection'; 
-// It's also a good practice to have a call-to-action at the end.
-import { CtaSection } from "../../components/marketing/CtaSection"; 
-// We'll create this component in the next step.
+import { CtaSection } from "../../components/marketing/CtaSection";
+
+export const metadata = {
+  title: 'Features - Eduegate',
+  description: 'Explore all the powerful features of Eduegate School ERP System designed for modern educational institutions.',
+};
 
 export default function FeaturesPage() {
   return (
-    <main>
-       <AllFeaturesSection />
-            <LearnSmarterSection />
-
+    <main className="bg-white">
       <FeatureHero />
+      <AllFeaturesSection />
       <KeyFeatures /> 
       <DetailedFeatureGrid />
-         <AlternatingFeatures /> 
+      <AlternatingFeatures />
       <CtaSection />
     </main>
   );

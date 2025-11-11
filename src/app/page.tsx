@@ -14,6 +14,8 @@ import { PackageSection } from '../components/marketing/PackageSection';
 import { WallOfLoveSection } from '../components/marketing/WallOfLoveSection';
 import { SuccessStoriesSection } from '../components/marketing/SuccessStoriesSection';
 import { FaqSection } from '../components/marketing/FaqSection';
+import { ProductsMaintenanceSection } from '../components/marketing/ProductsMaintenanceSection';
+
 
 
 
@@ -25,6 +27,7 @@ export default function Home() {
        <main>
         
          <NewHeroSection />
+         <ProductsMaintenanceSection/>
           <AiFeatures />
                 <InstitutionsSection /> 
           <MobileAppSection />

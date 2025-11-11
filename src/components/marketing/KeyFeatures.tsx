@@ -4,6 +4,7 @@
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { Lock, Users, Wallet, FileText, Settings, GraduationCap } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 // --- Data for each feature node ---
 // We define the title, icon, color, and positioning classes here for easy management.
@@ -70,13 +71,21 @@ const zoomIn: Variants = {
 
 export function KeyFeatures() {
   return (
-    <section className="py-20 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 md:mb-20">
-          <p className="font-semibold text-amber-500">Features</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Zap className="w-5 h-5 text-blue-600" />
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Key Features</span>
+          </div>
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             Check The Key Features Of Our ERP System
           </h2>
+          
+          <p className="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+            Comprehensive modules designed to handle every aspect of your school operations
+          </p>
         </div>
 
         {/* This container holds the entire circular layout */}

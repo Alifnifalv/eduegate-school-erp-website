@@ -66,26 +66,66 @@ const features = [
 
 export function DetailedFeatureGrid() {
   return (
-    <section className="py-20 bg-slate-50/50">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature) => (
-            <div key={feature.title} className="bg-background rounded-xl border p-6 transition-all hover:shadow-lg">
-              <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 bg-blue-600 rounded-lg p-3">
-                  {feature.icon}
+    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <BookOpen className="w-5 h-5 text-blue-600" />
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Detailed Features</span>
+          </div>
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+            Complete Module Breakdown
+          </h2>
+          
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+            Each module is thoughtfully designed to streamline specific aspects of school management
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {features.map((feature, index) => (
+            <div key={feature.title} className="group relative h-full">
+              {/* Hover gradient effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+              
+              <div className="relative h-full bg-white border border-gray-200 rounded-2xl p-6 md:p-8 hover:border-blue-300 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                {/* Index badge */}
+                <div className="absolute top-4 right-4 flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-600 font-semibold text-sm">
+                  {index + 1}
                 </div>
-                <h3 className="text-lg font-bold">{feature.title}</h3>
+
+                {/* Icon and Title */}
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-3 group-hover:shadow-lg transition-all">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-snug pt-1">
+                    {feature.title}
+                  </h3>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 flex-1">
+                  {feature.description}
+                </p>
+
+                {/* Key Points */}
+                <div className="pt-6 border-t border-gray-200">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Key Features</p>
+                  <ul className="space-y-2">
+                    {feature.keyPoints.map(point => (
+                      <li key={point} className="flex gap-3 text-sm text-gray-700">
+                        <CheckCircle className="h-5 w-5 text-green-500 shrink-0 flex-none mt-0.5" />
+                        <span className="leading-relaxed">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Decorative corner */}
+                <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <p className="mt-4 text-muted-foreground text-sm">{feature.description}</p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                {feature.keyPoints.map(point => (
-                   <li key={point} className="flex gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
