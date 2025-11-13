@@ -2,7 +2,6 @@
 "use client";
 
 import Link from 'next/link';
-import { Bus, MapPin, Check } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
 // A simple fade-in-up animation variant for reuse
@@ -16,67 +15,72 @@ const fadeInUp: Variants = {
 };
 
 export function FeaturedModuleSection() {
-  return (
-    // The main section container. We use `overflow-hidden` for the decorative blur circles.
-    <section className="relative overflow-hidden bg-sky-900 text-white py-20 sm:py-24">
-      
-      {/* Decorative background blur circles */}
-      <div className="absolute -left-16 -top-16 w-48 h-48 bg-cyan-500/20 rounded-full blur-2xl"></div>
-      <div className="absolute -right-16 -bottom-16 w-48 h-48 bg-cyan-500/20 rounded-full blur-2xl"></div>
+  const imgFrame1000003084 = "https://www.figma.com/api/mcp/asset/37113c0a-e4b4-4641-8570-3864af90e6c6";
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  return (
+    <section className="relative overflow-hidden bg-[#144685] text-white py-32 px-6 sm:px-8 lg:px-28">
+      {/* Background image overlay */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img 
+          alt="background pattern" 
+          className="absolute max-w-none object-cover size-full opacity-40" 
+          src={imgFrame1000003084} 
+        />
+      </div>
+
+      <div className="relative z-10 max-w-3xl">
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+          variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
+          className="space-y-5"
         >
-          {/* === LEFT COLUMN: Text Content === */}
-          <motion.div variants={fadeInUp} className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+          {/* Title */}
+          <motion.div variants={fadeInUp} className="mb-5">
+            <h2 className="text-5xl md:text-6xl font-medium font-['Poppins'] leading-tight">
               eduTransafe
             </h2>
-            <p className="text-lg text-sky-200 leading-relaxed">
+          </motion.div>
+
+          {/* Description */}
+          <motion.div variants={fadeInUp} className="space-y-5">
+            <p className="text-lg font-['Poppins'] leading-relaxed text-white">
               A dedicated Transport Management System, designed to prioritize student safety while streamlining school transport operations. With a mobile app for drivers and real-time monitoring for administrators, eduTransafe ensures every journey is secure, efficient, and accountable.
             </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 pt-4 text-sky-100">
-              <li className="flex items-center gap-3">
-                <Check size={20} className="text-yellow-400 shrink-0" />
-                <span>Route Optimization</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Check size={20} className="text-yellow-400 shrink-0" />
-                <span>Built-in Attendance Marking</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Check size={20} className="text-yellow-400 shrink-0" />
-                <span>Driver Behavior Monitoring</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Check size={20} className="text-yellow-400 shrink-0" />
-                <span>Real-Time Location & Notifications</span>
-              </li>
-            </ul>
-            <div className="pt-6">
-              <Link href="/features/transport" className="inline-block bg-yellow-400 text-sky-950 px-8 py-3 rounded-lg text-base font-bold hover:bg-yellow-500 transition-transform hover:scale-105 duration-300 shadow-lg">
-                Know More
-              </Link>
-            </div>
           </motion.div>
-          
-          {/* === RIGHT COLUMN: Graphic Content === */}
-          <motion.div variants={fadeInUp} className="flex items-center justify-center">
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 bg-cyan-500 rounded-full flex items-center justify-center">
-                <Bus size="60%" className="text-sky-900" />
-              </div>
-              <div className="absolute bottom-4 right-4 bg-white rounded-full p-4 shadow-lg">
-                <MapPin size={40} className="text-cyan-600" />
-              </div>
+
+          {/* Features Grid - Two columns */}
+          <motion.div variants={fadeInUp} className="space-y-3 pt-2">
+            {/* Row 1 */}
+            <div className="grid grid-cols-2 gap-8">
+              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+                <li className="leading-8">Route Optimization</li>
+              </ul>
+              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+                <li className="leading-8">Built-In Attendance Marking</li>
+              </ul>
+            </div>
+            {/* Row 2 */}
+            <div className="grid grid-cols-2 gap-8">
+              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+                <li className="leading-8">Driver Behavior Monitoring</li>
+              </ul>
+              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+                <li className="leading-8">Real-Time Location & Notifications</li>
+              </ul>
             </div>
           </motion.div>
 
+          {/* Call-to-Action Button */}
+          <motion.div variants={fadeInUp} className="pt-4">
+            <Link 
+              href="/features/transport" 
+              className="inline-flex items-center justify-center bg-[#f9d716] text-[#111111] px-5 py-3 rounded-lg text-sm font-semibold font-['Poppins'] hover:bg-yellow-500 transition-colors duration-300"
+            >
+              Know More
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
