@@ -36,10 +36,10 @@ export function PackageSection() {
           <div className="relative z-10">
             <div className="pt-10 pb-12">
               <div className="mx-auto max-w-2xl text-center space-y-3.5">
-                <h1 className="text-3xl font-semibold md:text-4xl">
+                <h1 className="text-3xl font-semibold font-sans md:text-4xl">
                   Package
                 </h1>
-                <p className="text-muted-foreground mx-auto max-w-5xl text-lg">
+                <p className="text-muted-foreground font-serif mx-auto max-w-5xl text-lg leading-relaxed">
                   With a single purchase, you will get the whole package of Metronic.
                 </p>
               </div>
@@ -76,7 +76,7 @@ export function PackageSection() {
                     className="flex items-center justify-start gap-2.5 text-left"
                   >
                     <Check className="size-4 text-green-600 shrink-0" />
-                    <span className="text-sm text-secondary-foreground">{item}</span>
+                    <span className="text-sm font-serif text-secondary-foreground">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -91,7 +91,7 @@ export function PackageSection() {
             >
               <Link
                 href="/pricing"
-                className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium text-sm text-primary-foreground border border-zinc-950/25 bg-gradient-to-t from-primary to-primary/85 shadow-md shadow-zinc-950/20 ring-1 ring-inset ring-white/20 transition-transform hover:scale-105 active:scale-95 h-10 rounded-lg px-6"
+                className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium font-sans text-sm text-primary-foreground border border-zinc-950/25 bg-gradient-to-t from-primary to-primary/85 shadow-md shadow-zinc-950/20 ring-1 ring-inset ring-white/20 transition-transform hover:scale-105 active:scale-95 h-10 rounded-lg px-6"
               >
                 Buy Metronic
               </Link>

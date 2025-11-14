@@ -20,8 +20,8 @@ export function DemoCard({ title, category, imageUrl }: DemoCardProps) {
         />
       </div>
       <div className="p-4 bg-background">
-        <h3 className="font-semibold">{title}</h3>
-        <p className="text-sm text-muted-foreground">{category}</p>
+        <h3 className="font-semibold font-sans">{title}</h3>
+        <p className="text-sm font-serif text-muted-foreground">{category}</p>
       </div>
     </div>
   );

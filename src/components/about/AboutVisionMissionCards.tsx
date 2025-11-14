@@ -14,8 +14,8 @@ export function AboutVisionMissionCards() {
           viewport={{ once: true }}
           className="bg-white border border-[#dbdbdb] rounded-3xl p-8 flex flex-col items-center text-center shadow-md"
         >
-          <h3 className="text-xl md:text-2xl font-bold text-[#144685] font-['Poppins'] mb-4">Our Vision</h3>
-          <p className="text-base md:text-lg text-[#484848] font-['Poppins']">
+          <h3 className="text-xl md:text-2xl font-bold text-[#144685] mb-4">Our Vision</h3>
+          <p className="text-base md:text-lg text-[#484848]">
             To revolutionize education management by making technology accessible, intuitive, and impactful for every institution.
           </p>
         </motion.div>
@@ -27,8 +27,8 @@ export function AboutVisionMissionCards() {
           viewport={{ once: true }}
           className="bg-white border border-[#dbdbdb] rounded-3xl p-8 flex flex-col items-center text-center shadow-md"
         >
-          <h3 className="text-xl md:text-2xl font-bold text-[#144685] font-['Poppins'] mb-4">Our Mission</h3>
-          <p className="text-base md:text-lg text-[#484848] font-['Poppins']">
+          <h3 className="text-xl md:text-2xl font-bold text-[#144685] mb-4">Our Mission</h3>
+          <p className="text-base md:text-lg text-[#484848]">
             To empower schools with modular, scalable ERP solutions that simplify operations, enhance learning, and foster collaboration among all stakeholders.
           </p>
         </motion.div>

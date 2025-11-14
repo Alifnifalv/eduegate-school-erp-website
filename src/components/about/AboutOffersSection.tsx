@@ -111,7 +111,7 @@ export function AboutOffersSection() {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#144685] font-['Poppins']">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#144685]">
             What eduêgate offers
           </h2>
         </motion.div>
@@ -128,10 +128,10 @@ export function AboutOffersSection() {
             <FeatureIcons.modular />
           </div>
           <div className="space-y-5">
-            <p className="text-base md:text-lg text-[#111111] font-['Poppins'] leading-relaxed">
+            <p className="text-base md:text-lg text-[#111111] leading-relaxed">
               Modular ERP logic for easy customization and integration with existing workflows
             </p>
-            <p className="text-base md:text-lg text-[#111111] font-['Poppins'] leading-relaxed">
+            <p className="text-base md:text-lg text-[#111111] leading-relaxed">
               Whether you're a CBSE, British, American school, international institution, or a multi-campus group, eduêgate adapts to your needs—making it the top choice for school digital transformation.
             </p>
           </div>
@@ -161,7 +161,7 @@ export function AboutOffersSection() {
                 <div className="mb-8">
                   <IconComponent />
                 </div>
-                <p className="text-base text-[#111111] font-['Poppins'] leading-relaxed">
+                <p className="text-base text-[#111111] leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>

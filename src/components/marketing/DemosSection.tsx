@@ -13,8 +13,8 @@ export function DemosSection() {
     <section className="py-20">
       <div className="container">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold">30+ Unique Demos</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold font-sans">30+ Unique Demos</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg font-serif text-muted-foreground leading-relaxed">
             Explore a variety of layouts and designs, perfect for any application.
           </p>
         </div>

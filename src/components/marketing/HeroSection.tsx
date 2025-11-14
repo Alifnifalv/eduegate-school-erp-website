@@ -12,7 +12,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-6xl font-extrabold tracking-tighter"
+          className="text-4xl md:text-6xl font-extrabold tracking-tighter font-sans"
         >
           <span className="bg-gradient-to-r from-blue-500 to-teal-400 text-transparent bg-clip-text">
             Bootstrap, React,
@@ -26,15 +26,15 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground"
+          className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground font-serif"
         >
           A professional, feature-rich, and mobile-first admin dashboard theme, UI kit, and design system.
         </motion.p>
         <div className="mt-8 flex justify-center gap-4">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-sans font-semibold hover:bg-blue-700 transition-colors">
             Purchase Now
           </button>
-          <button className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-8 py-3 rounded-lg font-semibold">
+          <button className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-8 py-3 rounded-lg font-sans font-semibold">
             Live Preview
           </button>
         </div>

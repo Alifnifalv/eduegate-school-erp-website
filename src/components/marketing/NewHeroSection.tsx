@@ -68,7 +68,7 @@ export function NewHeroSection() {
             viewport={{ once: true }}
             variants={containerVariants} className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-12">
             <div className="space-y-2">
-              <motion.h1 variants={fadeInUp} className="text-3xl md:text-5xl font-bold leading-tight">
+              <motion.h1 variants={fadeInUp} className="text-3xl md:text-5xl font-bold font-sans leading-tight">
                 <div className="flex items-center justify-center lg:justify-start gap-4">
                   <span>The</span>
                   <span className="py-2.5 text-3xl md:text-5xl font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -77,23 +77,23 @@ export function NewHeroSection() {
                   </span>
                 </div>
               </motion.h1>
-                 <motion.h1 variants={fadeInUp} className="text-3xl md:text-5xl font-bold leading-tight">
+                 <motion.h1 variants={fadeInUp} className="text-3xl md:text-5xl font-bold font-sans leading-tight">
                 <div className="flex items-center justify-center lg:justify-start gap-4">
                   <span>Way, to Run a School.</span>
                 </div>
               </motion.h1>
-              <motion.h2 variants={fadeInUp} className="text-lg lg:text-3xl font-semibold text-gray-800">
+              <motion.h2 variants={fadeInUp} className="text-lg lg:text-3xl font-semibold font-sans text-gray-800">
                 The All-in-One School Management System
               </motion.h2>
             </div>
             <motion.div variants={fadeInUp} className="rounded-xl bg-white shadow-lg border border-gray-200/80 p-5 space-y-3.5 relative w-full max-w-md">
               <Quote className="size-6 absolute -top-3 right-4 fill-white stroke-black drop-shadow-lg" />
-              <p className="text-base text-gray-600">
+              <p className="text-base font-serif text-gray-600 leading-relaxed">
                 &quot;This ERP solution has been transformative for our institution. It streamlined our operations and improved parent-teacher communication immensely. &quot;
               </p>
               <div className="flex flex-col sm:flex-row items-baseline justify-between gap-2.5">
-                <span className="text-sm text-gray-900 font-semibold">John Doe</span>
-                <span className="text-xs">
+                <span className="text-sm font-sans text-gray-900 font-semibold">John Doe</span>
+                <span className="text-xs font-serif">
                   <span className="text-gray-500">Principal at </span>
                   <span className="text-gray-900 font-semibold">Future Minds Academy</span>
                 </span>

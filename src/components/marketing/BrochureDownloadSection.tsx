@@ -57,7 +57,7 @@ export function BrochureDownloadSection() {
           {/* Title */}
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl sm:text-4xl md:text-5xl font-normal font-['Poppins'] text-center text-[#111111] leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-normal font-sans text-center text-[#111111] leading-tight"
           >
             Want to download our Brochure ?
           </motion.h2>
@@ -74,7 +74,7 @@ export function BrochureDownloadSection() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full sm:w-56 px-4 py-3 bg-white border-0 rounded-l-lg text-[#111111] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 font-['Poppins'] text-sm"
+                className="w-full sm:w-56 px-4 py-3 bg-white border-0 rounded-l-lg text-[#111111] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                 required
               />
               <button
@@ -93,7 +93,7 @@ export function BrochureDownloadSection() {
             {/* Download Brochure Button */}
             <button
               onClick={handleDownloadBrochure}
-              className="px-6 py-3 border-2 border-[#144685] bg-white hover:bg-blue-50 text-[#144685] rounded-lg font-semibold font-['Poppins'] text-sm transition-colors duration-300 flex items-center justify-center gap-2 whitespace-nowrap"
+              className="px-6 py-3 border-2 border-[#144685] bg-white hover:bg-blue-50 text-[#144685] rounded-lg font-semibold font-sans text-sm transition-colors duration-300 flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <Download size={16} />
               Download Brochure

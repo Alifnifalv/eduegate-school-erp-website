@@ -22,7 +22,7 @@ export function AboutSoftopSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#144685] mb-4 font-['Poppins']"
+          className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#144685] mb-4"
         >
           About Softop Solutions – Innovative Minds in EdTech
         </motion.h2>
@@ -58,7 +58,7 @@ export function AboutSoftopSection() {
                 <path d="M20 6L9 17l-5-5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-[#144685] mb-2 font-['Poppins']">User-centric and multilingual</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-[#144685] mb-2">User-centric and multilingual</h3>
           </motion.div>
 
           <motion.div
@@ -73,7 +73,7 @@ export function AboutSoftopSection() {
                 <path d="M20 6L9 17l-5-5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-[#144685] mb-2 font-['Poppins']">Data-driven and analytics-ready</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-[#144685] mb-2">Data-driven and analytics-ready</h3>
           </motion.div>
 
           <motion.div
@@ -88,7 +88,7 @@ export function AboutSoftopSection() {
                 <path d="M20 6L9 17l-5-5" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <h3 className="text-lg md:text-xl font-semibold text-[#144685] mb-2 font-['Poppins']">Agile and integration-friendly</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-[#144685] mb-2">Agile and integration-friendly</h3>
           </motion.div>
         </motion.div>
       </div>

@@ -7,11 +7,11 @@ export function RequestCallBack() {
   return (
     <section className="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#144685] font-['Poppins'] mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#144685] mb-6">
           Request a Call Back
         </h2>
-        <p className="text-base md:text-lg text-[#484848] font-['Poppins'] mb-8">
-          Need help or want to talk to our support team? Fill out the form and we’ll get back to you as soon as possible.
+        <p className="text-base md:text-lg text-[#484848] mb-8">
+          Need help or want to talk to our support team? Fill out the form and we'll get back to you as soon as possible.
         </p>
         {!submitted ? (
           <form

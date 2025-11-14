@@ -4,10 +4,10 @@ export function AboutMapSection() {
   return (
     <section className="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#144685] font-['Poppins'] mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#144685] mb-6">
           Our Location
         </h2>
-        <p className="text-base md:text-lg text-[#484848] font-['Poppins'] mb-8">
+        <p className="text-base md:text-lg text-[#484848] mb-8">
           Visit us at our office or reach out for more information.
         </p>
         <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
@@ -22,7 +22,7 @@ export function AboutMapSection() {
             title="Softop Solutions Location"
           ></iframe>
         </div>
-        <div className="text-lg text-[#144685] font-['Poppins']">
+        <div className="text-lg text-[#144685]">
           <strong>Softop Solutions</strong><br />
           123 Main Street, Business District<br />
           City, Country 12345<br />

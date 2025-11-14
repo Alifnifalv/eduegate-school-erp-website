@@ -29,10 +29,10 @@ export function TestimonialCard({ name, title, imageUrl, children }: Testimonial
           className="relative flex shrink-0 size-11 rounded-full"
         />
         <div>
-          <h3 className="font-medium">{name}</h3>
-          <span className="text-muted-foreground block text-sm tracking-wide">{title}</span>
+          <h3 className="font-medium font-sans">{name}</h3>
+          <span className="text-muted-foreground font-serif block text-sm tracking-wide">{title}</span>
         </div>
-        <blockquote className="col-span-2 mt-3 text-gray-700 dark:text-gray-300">
+        <blockquote className="col-span-2 mt-3 font-serif text-gray-700 dark:text-gray-300 leading-relaxed">
           {children}
         </blockquote>
       </div>

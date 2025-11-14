@@ -17,7 +17,7 @@ export function FeaturedClients() {
         {/* "See all clients" Button */}
         <Link
           href="/clients"
-          className="items-center gap-[6px] justify-center whitespace-nowrap rounded-[32px] py-2 px-[14px] text-sm font-medium text-white bg-transparent backdrop-blur-[24px] 
+          className="items-center gap-[6px] justify-center whitespace-nowrap rounded-[32px] py-2 px-[14px] text-sm font-medium font-sans text-white bg-transparent backdrop-blur-[24px] 
                      absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 
                      hidden md:flex 
                      opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 ease-out

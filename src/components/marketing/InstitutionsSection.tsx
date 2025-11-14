@@ -59,10 +59,10 @@ export function InstitutionsSection() {
           variants={fadeInUp}
         >
           <p className="font-semibold text-gray-500">What We Serve</p>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-blue-900">
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold font-sans tracking-tight text-blue-900">
             Tailored ERP for Every Educational Institution
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl mx-auto text-lg font-serif text-muted-foreground leading-relaxed">
             Our ERP is designed to meet the unique needs of all educational institutions. From kindergarten classrooms to university campuses, we understand that education demands more than generic software.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export function InstitutionsSection() {
               
               {/* Centered Text */}
               <div className="absolute inset-0 flex items-center justify-center p-4">
-                <h3 className="text-white text-2xl font-bold text-center drop-shadow-md">
+                <h3 className="text-white text-2xl font-bold font-sans text-center drop-shadow-md">
                   {item.name}
                 </h3>
               </div>

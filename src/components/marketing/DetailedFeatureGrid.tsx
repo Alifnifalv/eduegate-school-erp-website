@@ -74,11 +74,11 @@ export function DetailedFeatureGrid() {
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Detailed Features</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-sans text-gray-900 leading-tight mb-4">
             Complete Module Breakdown
           </h2>
           
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-serif text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Each module is thoughtfully designed to streamline specific aspects of school management
           </p>
         </div>
@@ -100,24 +100,24 @@ export function DetailedFeatureGrid() {
                   <div className="flex-shrink-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-3 group-hover:shadow-lg transition-all">
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 leading-snug pt-1">
+                  <h3 className="text-lg md:text-xl font-bold font-sans text-gray-900 leading-snug pt-1">
                     {feature.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 flex-1">
+                <p className="text-gray-600 font-serif text-sm md:text-base leading-relaxed mb-6 flex-1">
                   {feature.description}
                 </p>
 
                 {/* Key Points */}
                 <div className="pt-6 border-t border-gray-200">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3">Key Features</p>
+                  <p className="text-xs font-semibold font-sans text-gray-500 uppercase tracking-widest mb-3">Key Features</p>
                   <ul className="space-y-2">
                     {feature.keyPoints.map(point => (
-                      <li key={point} className="flex gap-3 text-sm text-gray-700">
+                      <li key={point} className="flex gap-3 text-sm font-serif text-gray-700 leading-relaxed">
                         <CheckCircle className="h-5 w-5 text-green-500 shrink-0 flex-none mt-0.5" />
-                        <span className="leading-relaxed">{point}</span>
+                        <span>{point}</span>
                       </li>
                     ))}
                   </ul>

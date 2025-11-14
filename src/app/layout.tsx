@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Inter } from "next/font/google";
+import { Inter, Manrope, Work_Sans } from "next/font/google";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { AnnouncementBar } from '../components/layout/AnnouncementBar'; 
@@ -11,15 +10,20 @@ import PageTransition from "../components/layout/PageTransition";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
   subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const worksans = Work_Sans({
   subsets: ["latin"],
+  variable: "--font-worksans",
+  weight: ["300", "400", "700", "800"],
 });
+
+// Note: Geist font imports removed because they are not available via Google Fonts.
+// If you need a similar UI font, use `Inter` or add a supported Google font here.
 
 export const metadata: Metadata = {
   title: "School ERP - The Ultimate Management Solution",
@@ -34,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased`}
+        className={`${manrope.variable} ${worksans.variable} ${inter.className} antialiased`}
       >
           <AnnouncementBar /> 
           <Header />

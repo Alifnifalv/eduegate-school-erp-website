@@ -90,23 +90,23 @@ export function MobileAppSection() {
           {/* Right Column: Text Content */}
           <motion.div variants={staggerContainer} className="flex-1 flex flex-col gap-10">
             {/* Headline */}
-            <motion.h2 variants={fadeInUp} className="text-5xl font-bold text-white font-['Poppins']">
+            <motion.h2 variants={fadeInUp} className="text-5xl font-bold font-sans text-white">
               eduêgate Teachie
             </motion.h2>
 
             {/* Description */}
-            <motion.p variants={fadeInUp} className="text-lg text-white font-['Poppins'] leading-relaxed max-w-2xl">
+            <motion.p variants={fadeInUp} className="text-lg font-serif text-white leading-relaxed max-w-2xl">
               A powerful mobile app that keeps students, parents, teachers, and administrators connected—no matter where they are.
             </motion.p>
 
             {/* Role Based Access */}
             <motion.div variants={fadeInUp} className="flex flex-col gap-3">
-              <h3 className="text-lg font-semibold text-white font-['Poppins']">
+              <h3 className="text-lg font-semibold text-white">
                 Role based access for:
               </h3>
               
               {/* First Row */}
-              <div className="flex gap-4 text-white font-['Poppins'] text-lg">
+              <div className="flex gap-4 text-white text-lg">
                 <ul className="list-disc list-inside">
                   <li>Teachers</li>
                 </ul>
@@ -125,7 +125,7 @@ export function MobileAppSection() {
               </div>
 
               {/* Second Row */}
-              <div className="flex gap-4 text-white font-['Poppins'] text-lg">
+              <div className="flex gap-4 text-white text-lg">
                 <ul className="list-disc list-inside">
                   <li>Visitors</li>
                 </ul>

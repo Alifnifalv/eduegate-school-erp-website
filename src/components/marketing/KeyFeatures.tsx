@@ -79,11 +79,11 @@ export function KeyFeatures() {
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Key Features</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-sans text-gray-900 leading-tight">
             Check The Key Features Of Our ERP System
           </h2>
           
-          <p className="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-base md:text-lg font-serif text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Comprehensive modules designed to handle every aspect of your school operations
           </p>
         </div>

@@ -82,10 +82,10 @@ export function AiFeatures() {
                     variants={fadeInUp}
                 >
                     <p className="font-semibold text-blue-400">The best educational ERP in the industry</p>
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mt-2">
+                    <h2 className="text-4xl md:text-5xl font-bold font-sans tracking-tight text-white mt-2">
                         AI-Powered Educational ERP for the Future of Learning
                     </h2>
-                    <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-300">
+                    <p className="mt-6 max-w-3xl mx-auto text-lg font-serif leading-8 text-gray-300">
                         By blending automation, intelligence, and innovation, eduēgate empowers schools, colleges, and universities to deliver smarter, more personalized learning experiences.
                     </p>
                 </motion.div>

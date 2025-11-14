@@ -40,10 +40,10 @@ export function FaqSection() {
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center mb-16"
         >
-          <h1 className="text-3xl font-semibold md:text-4xl">
+          <h1 className="text-3xl font-semibold font-sans md:text-4xl">
             Frequently Asked Questions
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg font-serif text-muted-foreground leading-relaxed">
             Get instant clarity on features, licenses, and support.
           </p>
         </motion.div>
@@ -58,10 +58,10 @@ export function FaqSection() {
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="text-left font-medium">
+                <AccordionTrigger className="text-left font-medium font-sans">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionContent className="text-base font-serif text-muted-foreground leading-relaxed">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -73,10 +73,10 @@ export function FaqSection() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-center text-muted-foreground text-sm mt-10"
+            className="text-center text-muted-foreground text-sm mt-10 font-serif"
           >
           Have more questions?{' '}
-          <Link href="/contact" className="font-semibold text-primary hover:underline">
+          <Link href="/contact" className="font-semibold font-sans text-primary hover:underline">
             Contact Us
           </Link>
           .

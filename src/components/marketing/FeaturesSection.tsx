@@ -40,10 +40,10 @@ export function FeaturesSection() {
       <div className="container mx-auto px-6">
         <div className="mx-auto max-w-2xl text-center mb-16">
           {/* === SECTION TITLE & DESCRIPTION UPDATED === */}
-          <h1 className="text-3xl font-semibold md:text-4xl">
+          <h1 className="text-3xl font-semibold font-sans md:text-4xl">
             Core Features for a Smarter Campus
           </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg font-serif text-muted-foreground leading-relaxed">
             Our suite of modules is engineered to digitize every aspect of your institution, from admissions to alumni.
           </p>
         </div>

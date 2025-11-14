@@ -35,7 +35,7 @@ export function CtaSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                             viewport={{ once: true }}
-                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-sans text-white leading-tight mb-6"
                         >
                             Ready to See It in Action?
                         </motion.h2>
@@ -45,7 +45,7 @@ export function CtaSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="text-base md:text-lg text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed"
+                            className="text-base md:text-lg font-serif text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed"
                         >
                             Schedule a personalized demo with our team today and discover how our ERP can transform your institution with powerful features and seamless integrations.
                         </motion.p>
@@ -57,12 +57,12 @@ export function CtaSection() {
                             viewport={{ once: true }}
                             className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
                         >
-                            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold font-sans transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
                                 Request a Demo
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
                             
-                            <Link href="/features" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all">
+                            <Link href="/features" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold font-sans transition-all">
                                 Explore All Features
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
@@ -74,7 +74,7 @@ export function CtaSection() {
                             whileInView={{ opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             viewport={{ once: true }}
-                            className="mt-12 pt-8 border-t border-blue-400/30 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-blue-50 text-sm"
+                            className="mt-12 pt-8 border-t border-blue-400/30 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-blue-50 text-sm font-serif"
                         >
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 rounded-full bg-blue-200" />

@@ -38,11 +38,11 @@ export function LearnSmarterSection() {
               <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
             </svg>
 
-            <h3 className="text-3xl font-semibold text-zinc-900 dark:text-zinc-50 leading-tight">
+            <h3 className="text-3xl font-semibold font-sans text-zinc-900 dark:text-zinc-50 leading-tight">
               Summary, quizzes, podcast, and more
             </h3>
 
-            <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
+            <p className="text-zinc-600 dark:text-zinc-400 font-serif text-lg leading-relaxed">
               Understand the key points, test your knowledge, get answers with
               references, and listen to an AI tutor.
             </p>

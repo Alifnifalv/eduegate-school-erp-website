@@ -38,14 +38,14 @@ export function FeaturedModuleSection() {
         >
           {/* Title */}
           <motion.div variants={fadeInUp} className="mb-5">
-            <h2 className="text-5xl md:text-6xl font-medium font-['Poppins'] leading-tight">
+            <h2 className="text-5xl md:text-6xl font-medium font-sans leading-tight">
               eduTransafe
             </h2>
           </motion.div>
 
           {/* Description */}
           <motion.div variants={fadeInUp} className="space-y-5">
-            <p className="text-lg font-['Poppins'] leading-relaxed text-white">
+            <p className="text-lg font-serif leading-relaxed text-white">
               A dedicated Transport Management System, designed to prioritize student safety while streamlining school transport operations. With a mobile app for drivers and real-time monitoring for administrators, eduTransafe ensures every journey is secure, efficient, and accountable.
             </p>
           </motion.div>
@@ -54,19 +54,19 @@ export function FeaturedModuleSection() {
           <motion.div variants={fadeInUp} className="space-y-3 pt-2">
             {/* Row 1 */}
             <div className="grid grid-cols-2 gap-8">
-              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+              <ul className="text-base font-serif text-white list-disc pl-6">
                 <li className="leading-8">Route Optimization</li>
               </ul>
-              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+              <ul className="text-base font-serif text-white list-disc pl-6">
                 <li className="leading-8">Built-In Attendance Marking</li>
               </ul>
             </div>
             {/* Row 2 */}
             <div className="grid grid-cols-2 gap-8">
-              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+              <ul className="text-base font-serif text-white list-disc pl-6">
                 <li className="leading-8">Driver Behavior Monitoring</li>
               </ul>
-              <ul className="text-base font-['Poppins'] text-white list-disc pl-6">
+              <ul className="text-base font-serif text-white list-disc pl-6">
                 <li className="leading-8">Real-Time Location & Notifications</li>
               </ul>
             </div>
@@ -76,7 +76,7 @@ export function FeaturedModuleSection() {
           <motion.div variants={fadeInUp} className="pt-4">
             <Link 
               href="/features/transport" 
-              className="inline-flex items-center justify-center bg-[#f9d716] text-[#111111] px-5 py-3 rounded-lg text-sm font-semibold font-['Poppins'] hover:bg-yellow-500 transition-colors duration-300"
+              className="inline-flex items-center justify-center bg-[#f9d716] text-[#111111] px-5 py-3 rounded-lg text-sm font-semibold font-sans hover:bg-yellow-500 transition-colors duration-300"
             >
               Know More
             </Link>

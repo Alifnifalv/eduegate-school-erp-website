@@ -40,20 +40,20 @@ export function AboutHeroSection() {
           {/* Left Content */}
           <div className="flex flex-col gap-10">
             <div className="space-y-5">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#144685] font-['Poppins']">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#144685]">
                 About eduêgate
               </h1>
               <div className="space-y-3">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#111111] font-['Poppins']">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#111111]">
                   The Best School ERP for
                 </h2>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#111111] font-['Poppins']">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#111111]">
                   Modern Institutions
                 </h2>
               </div>
             </div>
             
-            <p className="text-base md:text-lg text-[#484848] font-['Poppins'] leading-relaxed">
+            <p className="text-base md:text-lg text-[#484848] leading-relaxed">
               eduêgate is a powerful, all-in-one School ERP system designed to simplify and optimize school operations. Recognized as one of the best ERP solutions for schools
             </p>
           </div>
@@ -63,19 +63,19 @@ export function AboutHeroSection() {
             <div className="grid grid-cols-2 gap-6">
               {/* Top Row - First two cards */}
               <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
+                <p className="text-5xl md:text-6xl font-bold text-[#111111] mb-3">
                   20+
                 </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
+                <p className="text-base md:text-lg text-[#484848] text-center">
                   Modules
                 </p>
               </div>
 
               <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
+                <p className="text-5xl md:text-6xl font-bold text-[#111111] mb-3">
                   4+
                 </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
+                <p className="text-base md:text-lg text-[#484848] text-center">
                   Mobile apps
                 </p>
               </div>
@@ -84,19 +84,19 @@ export function AboutHeroSection() {
             <div className="grid grid-cols-2 gap-6">
               {/* Bottom Row - Last two cards */}
               <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
+                <p className="text-5xl md:text-6xl font-bold text-[#111111] mb-3">
                   25+
                 </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
+                <p className="text-base md:text-lg text-[#484848] text-center">
                   Integrations
                 </p>
               </div>
 
               <div className="bg-white border border-[#dbdbdb] rounded-lg p-8 flex flex-col items-center justify-center min-h-[200px] hover:shadow-lg transition-shadow">
-                <p className="text-5xl md:text-6xl font-bold text-[#111111] font-['Poppins'] mb-3">
+                <p className="text-5xl md:text-6xl font-bold text-[#111111] mb-3">
                   25+
                 </p>
-                <p className="text-base md:text-lg text-[#484848] font-['Poppins'] text-center">
+                <p className="text-base md:text-lg text-[#484848] text-center">
                   On Going
                   <br />
                   Projects

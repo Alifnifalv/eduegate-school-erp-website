@@ -17,14 +17,14 @@ export function FeatureCard({ title, description, imageUrl }: FeatureCardProps) 
         <Image src={imageUrl} alt={title} width={400} height={250} />
       </div>
 
-      <div className="text-lg font-bold mt-4 mb-2 relative z-10 px-10">
+      <div className="text-lg font-bold font-sans mt-4 mb-2 relative z-10 px-10">
         {/* Accent line */}
         <div className="absolute left-0 top-0 h-6 group-hover:h-8 w-1 rounded-r-full bg-neutral-300 dark:bg-neutral-700 group-hover:bg-blue-500 transition-all duration-200"></div>
         <span className="group-hover:translate-x-2 transition-transform duration-200 inline-block">
           {title}
         </span>
       </div>
-      <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+      <p className="text-sm font-serif text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10 leading-relaxed">
         {description}
       </p>
     </div>

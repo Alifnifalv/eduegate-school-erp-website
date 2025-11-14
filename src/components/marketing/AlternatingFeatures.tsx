@@ -76,11 +76,11 @@ export function AlternatingFeatures() {
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Comparison</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-sans text-gray-900 leading-tight mb-6">
             Why Choose Our ERP?
           </h2>
           
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg font-serif text-gray-600 max-w-3xl mx-auto leading-relaxed">
             See how our modern platform transforms traditional school management challenges into streamlined, efficient solutions.
           </p>
         </div>

@@ -28,7 +28,7 @@ export function AllFeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-sans text-gray-900 leading-tight mb-6"
           >
             Everything you need to succeed
           </motion.h2>
@@ -38,7 +38,7 @@ export function AllFeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-base md:text-lg font-serif text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
             Explore our complete suite of integrated modules designed specifically for educational institutions of all sizes.
           </motion.p>
@@ -70,16 +70,16 @@ export function AllFeaturesSection() {
 
                     {/* Content */}
                     <div className="flex-1">
-                      <h3 className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+                      <h3 className="font-semibold font-sans text-lg text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-sm text-gray-600 leading-relaxed">
+                      <p className="text-sm font-serif text-gray-600 leading-relaxed">
                         {feature.shortDescription}
                       </p>
                     </div>
 
                     {/* Arrow Link */}
-                    <div className="flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                    <div className="flex items-center gap-2 text-blue-600 font-semibold font-sans text-sm group-hover:gap-3 transition-all">
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>

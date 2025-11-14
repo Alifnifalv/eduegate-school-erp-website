@@ -44,7 +44,7 @@ const getIcon = (title: string) => {
 export function DetailedFeatureList({ keyFeatures }: DetailedFeatureListProps) {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6">Key Capabilities</h2>
+      <h2 className="text-2xl font-bold font-sans mb-6">Key Capabilities</h2>
       <motion.div 
         className="space-y-6"
         initial="hidden"
@@ -62,8 +62,8 @@ export function DetailedFeatureList({ keyFeatures }: DetailedFeatureListProps) {
               {getIcon(point.title)}
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900">{point.title}</h4>
-              <p className="mt-1 text-sm text-muted-foreground">{point.description}</p>
+              <h4 className="font-semibold font-sans text-gray-900">{point.title}</h4>
+              <p className="mt-1 text-sm font-serif text-muted-foreground leading-relaxed">{point.description}</p>
             </div>
           </motion.div>
         ))}

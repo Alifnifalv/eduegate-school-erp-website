@@ -33,10 +33,10 @@ export function Footer() {
           
           {/* Column 1: Brand and Socials */}
           <div className="space-y-6">
-            <Link href="/" className="text-2xl font-bold">
+            <Link href="/" className="text-2xl font-bold font-sans">
               SchoolERP
             </Link>
-            <p className="text-gray-400 max-w-xs">
+            <p className="text-gray-400 max-w-xs font-serif leading-relaxed">
               The ultimate admin dashboard solution for your school management system.
             </p>
             <div className="flex space-x-4">
@@ -49,7 +49,7 @@ export function Footer() {
 
           {/* Column 2: Product Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Product</h3>
+            <h3 className="font-semibold text-lg mb-4 font-sans">Product</h3>
             <ul className="space-y-3">
               <FooterLink href="/features">Features</FooterLink>
               <FooterLink href="/demos">Demos</FooterLink>
@@ -60,7 +60,7 @@ export function Footer() {
 
           {/* Column 3: Help & Resources */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Help</h3>
+            <h3 className="font-semibold text-lg mb-4 font-sans">Help</h3>
             <ul className="space-y-3">
               <FooterLink href="/support">Support</FooterLink>
               <FooterLink href="/documentation">Documentation</FooterLink>
@@ -71,8 +71,8 @@ export function Footer() {
 
           {/* Column 4: Stay Connected (Newsletter) */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Stay Connected</h3>
-            <p className="text-gray-400 mb-4">
+            <h3 className="font-semibold text-lg mb-4 font-sans">Stay Connected</h3>
+            <p className="text-gray-400 mb-4 font-serif leading-relaxed">
               Join our newsletter to stay up to date on features and releases.
             </p>
             <form>
@@ -84,7 +84,7 @@ export function Footer() {
                 />
                 <button
                   type="submit"
-                  className="bg-blue-600 px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors font-sans font-semibold"
                 >
                   <Mail size={20} />
                 </button>
@@ -96,7 +96,7 @@ export function Footer() {
 
       {/* Bottom Footer Bar */}
       <div className="bg-gray-950 py-6">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-serif">
           <p>&copy; {new Date().getFullYear()} SchoolERP by YourCompany. All Rights Reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
