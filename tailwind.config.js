@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-worksans)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-worksans)', 'Georgia', 'serif'],
-        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        sans: ['Roboto', 'Lato', 'sans-serif'],
+        serif: ['Lato', 'Roboto', 'serif'],
+        mono: ['Roboto', 'Lato', 'monospace'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -20,6 +20,20 @@ module.exports = {
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
         '5xl': ['3rem', { lineHeight: '1' }],
+      },
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)',
+        background: 'var(--color-background)',
+        surface: 'var(--color-surface)',
+        text: 'var(--color-text)',
+        muted: 'var(--color-muted)',
+        border: 'var(--color-border)',
+        error: 'var(--color-error)',
+        success: 'var(--color-success)',
+        warning: 'var(--color-warning)',
+        info: 'var(--color-info)',
       },
     },
   },

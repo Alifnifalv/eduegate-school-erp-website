@@ -50,7 +50,7 @@ export function SocialProof() {
   return (
     <section id="brands" className="py-16 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold font-sans text-muted-foreground">
+        <h2 className="text-center text-lg font-semibold font-lato text-muted-foreground">
           Trusted by top school&apos;s world wide
         </h2>
         <div className="relative mt-6">

@@ -18,7 +18,8 @@ export function TypingText() {
       deletionSpeed={40} // backspace speed
       repeat={Infinity} // loop forever
       wrapper="span"
-      className="py-2.5 text-3xl md:text-5xl font-semibold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+      className="py-2.5 text-3xl md:text-5xl font-semibold bg-gradient-to-r bg-clip-text text-transparent"
+      style={{backgroundImage: 'linear-gradient(to right, var(--color-gradient-from), var(--color-gradient-via), var(--color-gradient-to))'}}
     />
   );
 }

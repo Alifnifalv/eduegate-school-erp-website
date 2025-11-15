@@ -16,11 +16,6 @@ const manrope = Manrope({
   weight: ["400", "700"],
 });
 
-const worksans = Work_Sans({
-  subsets: ["latin"],
-  variable: "--font-worksans",
-  weight: ["300", "400", "700", "800"],
-});
 
 // Note: Geist font imports removed because they are not available via Google Fonts.
 // If you need a similar UI font, use `Inter` or add a supported Google font here.
@@ -38,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} ${worksans.variable} ${inter.className} antialiased`}
+        className={`${manrope.variable} ${inter.className} antialiased`}
       >
           <AnnouncementBar /> 
           <Header />

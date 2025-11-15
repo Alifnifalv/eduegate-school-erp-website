@@ -10,7 +10,6 @@ const imgGroup = "https://www.figma.com/api/mcp/asset/20e8675e-6516-4d57-a7c4-5c
 const imgGroup1 = "https://www.figma.com/api/mcp/asset/0e4073aa-05e1-49a2-81a0-e0c843ecdaab";
 const imgGroup2 = "https://www.figma.com/api/mcp/asset/f4347855-fe5a-46b2-bef3-7d1ed3c9bfab";
 const imgVector = "https://www.figma.com/api/mcp/asset/bf4ba158-e45e-4414-84f3-0af8b121fc01";
-const imgApple = "https://www.figma.com/api/mcp/asset/64eef205-35d5-4396-a798-372fa644ba41";
 const imgPlaystore = "https://www.figma.com/api/mcp/asset/eaccd0eb-125e-40ac-b8db-35256d2dae6e";
 const imgPath90 = "https://www.figma.com/api/mcp/asset/23d8d038-3ad1-40c2-abc4-6f15146489a8";
 
@@ -39,7 +38,7 @@ const sideIcons = [
 
 export function MobileAppSection() {
   return (
-    <section className="relative w-full py-12 md:py-24 overflow-hidden bg-[#144685]">
+    <section className="relative w-full py-12 md:py-24 overflow-hidden" style={{background: 'var(--color-primary)', color: 'var(--color-mobileapp-text)'}}>
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <img alt="" className="absolute max-w-none object-cover w-full h-full" src="https://www.figma.com/api/mcp/asset/42114c7b-cceb-4152-a6f2-f07ee6de2232" />
@@ -85,41 +84,55 @@ export function MobileAppSection() {
           {/* Right Column: Text Content */}
           <motion.div variants={staggerContainer} className="flex-1 flex flex-col gap-8 md:gap-10 w-full">
             {/* Headline */}
-            <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl md:text-5xl font-bold font-sans text-white">
+            <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl md:text-5xl font-bold font-lato text-white">
               eduêgate Teachie
             </motion.h2>
             {/* Description */}
-            <motion.p variants={fadeInUp} className="text-base sm:text-lg font-serif text-white leading-relaxed max-w-2xl">
+            <motion.p variants={fadeInUp} className="text-base sm:text-lg font-roboto text-white leading-relaxed max-w-2xl">
               A powerful mobile app that keeps students, parents, teachers, and administrators connected—no matter where they are.
             </motion.p>
             {/* Role Based Access */}
             <motion.div variants={fadeInUp} className="flex flex-col gap-3">
-              <h3 className="text-base sm:text-lg font-semibold text-white">
+              <h3 className="text-base sm:text-lg font-semibold font-lato text-white">
                 Role based access for:
               </h3>
               {/* First Row */}
-              <div className="flex flex-wrap gap-4 text-white text-base sm:text-lg">
+              <div className="flex flex-wrap gap-4 text-base sm:text-lg" style={{ color: 'var(--color-secondary-light)' }}>
                 <ul className="list-disc list-inside"><li>Teachers</li></ul>
                 <ul className="list-disc list-inside"><li>Admins</li></ul>
                 <ul className="list-disc list-inside"><li>Owners</li></ul>
                 <ul className="list-disc list-inside"><li>Bus attenders</li></ul>
-                <ul className="list-disc list-inside"><li>Security</li></ul>
               </div>
               {/* Second Row */}
-              <div className="flex flex-wrap gap-4 text-white text-base sm:text-lg">
-                <ul className="list-disc list-inside"><li>Visitors</li></ul>
+              <div className="flex flex-wrap gap-4 text-base sm:text-lg" style={{ color: 'var(--color-secondary-light)' }}>
+                {/* <ul className="list-disc list-inside"><li>Visitors</li></ul> */}
+                <ul className="list-disc list-inside"><li>Security</li></ul>
                 <ul className="list-disc list-inside"><li>Parents</li></ul>
                 <ul className="list-disc list-inside"><li>Teachers</li></ul>
                 <ul className="list-disc list-inside"><li>Students</li></ul>
               </div>
             </motion.div>
-            {/* Download Buttons */}
+            {/* Download Buttons - Figma accurate, using local images */}
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="#" className="bg-black border border-gray-500 rounded-lg p-2 w-32 h-10 flex items-center justify-center">
-                <img alt="Get it on Google Play" className="w-full h-full object-contain" src={imgPlaystore} />
+              <a href="#" className="relative rounded-xl overflow-hidden w-40 h-14 flex items-center justify-center shadow-lg group bg-black border border-gray-300">
+                <Image
+                  src="/backgrounds/get-it-on-google.png"
+                  alt="Get it on Google Play"
+                  fill
+                  sizes="160px"
+                  className="object-contain transition-transform duration-200 group-hover:scale-105"
+                  priority
+                />
               </a>
-              <a href="#" className="bg-black border border-gray-500 rounded-lg p-2 w-32 h-10 flex items-center justify-center">
-                <img alt="Download on the App Store" className="w-full h-full object-contain" src={imgApple} />
+              <a href="#" className="relative rounded-xl overflow-hidden w-40 h-14 flex items-center justify-center shadow-lg group bg-black border border-gray-300">
+                <Image
+                  src="/backgrounds/get-it-on-ios.png"
+                  alt="Download on the App Store"
+                  fill
+                  sizes="160px"
+                  className="object-contain transition-transform duration-200 group-hover:scale-105"
+                  priority
+                />
               </a>
             </motion.div>
           </motion.div>

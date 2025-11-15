@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function OurServicePage() {
   return (
-    <main className="bg-white">
+    <main style={{background: 'var(--color-main-bg)', color: 'var(--color-main-text)'}}>
       <section>
         <OurServiceHero />
       </section>

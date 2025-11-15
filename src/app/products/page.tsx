@@ -2,7 +2,7 @@ import { ProductsMaintenanceSection } from "@/components/marketing/ProductsMaint
 
 export default function ProductsPage() {
   return (
-    <main>
+    <main style={{background: 'var(--color-main-bg)', color: 'var(--color-main-text)'}}>
       <ProductsMaintenanceSection />
     </main>
   );

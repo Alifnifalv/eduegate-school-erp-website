@@ -17,9 +17,9 @@ export function WhyEduegateSection() {
           <div className="flex flex-col items-center gap-7 w-full max-w-4xl text-center">
           <div className="flex flex-col items-center gap-5">
             <p className="text-lg text-gray-600 font-semibold">Why Eduêgate</p>
-            <h2 className="text-4xl lg:text-5xl font-bold font-sans text-[#111111]">Built for Performance, Powered by Intelligence</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold font-lato" style={{ color: 'var(--color-primary)' }}>Built for Performance, Powered by Intelligence</h2>
           </div>
-          <p className="text-base font-serif text-gray-600 leading-relaxed">
+          <p className="text-base font-roboto text-gray-600 leading-relaxed">
             eduêgate is a mobile-ready educational ERP available in both cloud and on-premise setups, connecting students, parents, teachers, and admins globally. It offers real-time access to lessons, performance data, and workflows—making education seamless, automated, and accessible from anywhere.
           </p>
         </div>
@@ -31,15 +31,15 @@ export function WhyEduegateSection() {
           </div>
           <div className="flex-1 flex flex-col gap-5">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold font-sans text-[#111111] mb-4">Multi-School Management</h3>
-              <p className="text-sm sm:text-base font-serif text-gray-600 leading-relaxed">
+              <h3 className="text-2xl lg:text-3xl font-bold font-lato mb-4" style={{ color: 'var(--color-primary)' }}>Multi-School Management</h3>
+              <p className="text-sm sm:text-base font-roboto text-gray-600 leading-relaxed">
                 Is your ERP limiting your growth? eduêgate is built to scale. Manage multiple schools, campuses, or branches from a single dashboard. Share resources, standardize operations, and monitor performance across institutions—all without switching systems.
               </p>
             </div>
             <div className="space-y-3">
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-9">
                 <div className="flex items-center gap-2">
-                  <ul className="list-disc text-sm sm:text-base font-serif text-gray-700 font-medium ml-6">
+                  <ul className="list-disc text-sm sm:text-base font-roboto text-gray-700 font-medium ml-6">
                     <li>Centralized administration</li>
                   </ul>
                 </div>
@@ -69,15 +69,15 @@ export function WhyEduegateSection() {
         <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-10 items-center w-full">
           <div className="flex-1 flex flex-col gap-5">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold font-sans text-[#111111] mb-4">Built-In Workflow Management</h3>
-              <p className="text-sm sm:text-base font-serif text-gray-600 leading-relaxed">
+              <h3 className="text-2xl lg:text-3xl font-bold font-lato mb-4" style={{ color: 'var(--color-primary)' }}>Built-In Workflow Management</h3>
+              <p className="text-sm sm:text-base font-roboto text-gray-600 leading-relaxed">
                 Every school operates differently. eduêgate's flexible workflow engine allows institutions to customize processes like admissions, approvals, evaluations, and reporting. No need to force-fit your operations into rigid templates—Eduêgate adapts to you
               </p>
             </div>
             <div className="space-y-3">
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-9">
                 <div className="flex items-center gap-2">
-                  <ul className="list-disc text-sm sm:text-base font-serif text-gray-700 font-medium ml-6">
+                  <ul className="list-disc text-sm sm:text-base font-roboto text-gray-700 font-medium ml-6">
                     <li>Multi-Level approval Chains</li>
                   </ul>
                 </div>
@@ -116,7 +116,7 @@ export function WhyEduegateSection() {
           </div>
           <div className="flex-1 flex flex-col gap-5">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-[#111111] mb-4">Digital Twin Visualization</h3>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>Digital Twin Visualization</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 See your school like never before. eduêgate's Digital Twin approach offers real-time graphical representations of activities, resources, and performance metrics—helping administrators make informed decisions with clarity and speed.
               </p>
@@ -154,7 +154,7 @@ export function WhyEduegateSection() {
         <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-10 items-center w-full">
           <div className="flex-1 flex flex-col gap-5">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-[#111111] mb-4">Degree Audit & Certification Pathway</h3>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>Degree Audit & Certification Pathway</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Track every step of a student's journey—from onboarding to graduation. Eduêgate records academic progress, attendance, assessments, and certifications, offering a complete visual audit trail for compliance and transparency
               </p>
@@ -194,7 +194,7 @@ export function WhyEduegateSection() {
           </div>
           <div className="flex-1 flex flex-col gap-5">
             <div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-[#111111] mb-4">Your Data, Your Security</h3>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4" style={{ color: 'var(--color-primary)' }}>Your Data, Your Security</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Eduêgate puts you in control. Whether deployed on-premise or in the cloud, your IT team can schedule backups, manage access, and retrieve data securely from the front end. No hidden layers—just full ownership and peace of mind.
               </p>

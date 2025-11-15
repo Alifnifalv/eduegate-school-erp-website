@@ -9,7 +9,7 @@ export function AppRatingWidget() {
         <div className="flex items-center gap-3">
           <Image src="/logos/eduegate-logo-icon.svg" alt="Eduegate Logo" width={32} height={32} />
           <div>
-            <p className="font-bold text-sm">Eduegate APP</p>
+            <p className="font-bold text-sm font-lato">Eduegate APP</p>
             <div className="flex items-center">
               <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
               {/* Duplicating for all 5 stars */}
@@ -17,7 +17,7 @@ export function AppRatingWidget() {
               <Star className="w-4 h-4 text-yellow-400 fill-yellow-400 ml-0.5" />
               <Star className="w-4 h-4 text-yellow-400 fill-yellow-400 ml-0.5" />
               <Star className="w-4 h-4 text-yellow-400 fill-yellow-400 ml-0.5" />
-              <span className="ml-2 text-xs font-semibold text-gray-600">4.8</span>
+              <span className="ml-2 text-xs font-semibold font-roboto text-gray-600">4.8</span>
             </div>
           </div>
         </div>

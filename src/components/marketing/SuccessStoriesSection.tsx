@@ -44,10 +44,10 @@ export function SuccessStoriesSection() {
           viewport={{ once: true }}
           className="mx-auto max-w-2xl text-center mb-16"
         >
-          <h1 className="text-3xl font-semibold font-sans md:text-4xl">
+          <h1 className="text-3xl font-semibold font-lato md:text-4xl">
             Success Stories
           </h1>
-          <p className="mt-4 text-lg font-serif text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-lg font-roboto text-muted-foreground leading-relaxed">
             Discover how leading companies leverage Metronic to build exceptional user experiences.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export function SuccessStoriesSection() {
                     </div>
                     <div className="relative grow p-8 md:p-12 flex flex-col justify-start items-start">
                       <Quote className="size-6 absolute top-10 left-5 fill-background stroke-background drop-shadow-lg" />
-                      <blockquote className="text-base font-serif leading-7 text-foreground mb-8 pt-10">
+                      <blockquote className="text-base font-roboto leading-7 text-foreground mb-8 pt-10">
                         <p>{story.quote}</p>
                       </blockquote>
                       <div className="mt-auto flex flex-col items-start justify-center gap-1.5">

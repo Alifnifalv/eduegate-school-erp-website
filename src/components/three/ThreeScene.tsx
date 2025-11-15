@@ -38,7 +38,7 @@ export function ThreeScene() {
 <div className="relative w-full max-w-5xl mx-auto min-h-[600px] pt-8 pb-8 px-4">
   {/* Main (Purple) */}
   <div className="absolute top-0 left-0 w-[56%] h-[54%] rounded-3xl bg-purple-700/90 z-10 flex flex-col justify-center px-8 py-8 text-white">
-    <h1 className="text-4xl font-bold mb-2">Signup Portal</h1>
+    <h1 className="text-4xl font-bold font-lato mb-2">Signup Portal</h1>
     <div className="text-lg">Edegate</div>
   </div>
 
@@ -55,7 +55,7 @@ export function ThreeScene() {
   
   {/* Bottom Center (Features Box) */}
   <div className="absolute bottom-0 left-[31%] w-[32%] h-[35%] rounded-2xl bg-emerald-400 px-8 py-10 flex flex-col justify-center text-white font-semibold text-lg z-30">
-    <ul className="space-y-3">
+    <ul className="space-y-3 font-roboto">
       <li>• Real-Time Updates</li>
       <li>• Dedicated Support</li>
       <li>• Easy Access</li>
@@ -65,7 +65,7 @@ export function ThreeScene() {
   {/* Bottom Right (Photo & Text) */}
   <div className="absolute bottom-0 right-0 w-[37%] h-[35%] rounded-2xl overflow-hidden z-30 flex items-end p-6" style={{background: "rgba(72, 100, 174, 0.8)"}}>
     <Image src="/your-bottom-right-image.jpg" alt="" layout="fill" objectFit="cover" className="opacity-70" />
-    <span className="relative z-10 text-white text-lg font-semibold">
+    <span className="relative z-10 text-white text-lg font-semibold font-lato">
       Access Your Meeting<br />Schedule and Updates
     </span>
   </div>

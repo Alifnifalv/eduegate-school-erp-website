@@ -14,19 +14,19 @@ export function FeatureHero() {
           <span className="text-sm font-medium text-blue-100">Powerful Features</span>
         </div>
         
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-sans tracking-tight text-white leading-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-lato tracking-tight text-white leading-tight mb-6">
           A Comprehensive Solution for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200">Modern Education</span>
         </h1>
         
-        <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl font-serif text-blue-100 leading-relaxed">
+        <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl font-roboto text-blue-100 leading-relaxed">
           Explore the powerful modules engineered to connect and streamline every aspect of your institution—from administration to the classroom.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4 justify-center">
-          <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold font-sans hover:bg-blue-50 transition-colors shadow-lg">
+          <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold font-roboto hover:bg-blue-50 transition-colors shadow-lg">
             Explore Features
           </button>
-          <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold font-sans hover:bg-white/10 transition-colors">
+          <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold font-roboto hover:bg-white/10 transition-colors">
             Request Demo
           </button>
         </div>

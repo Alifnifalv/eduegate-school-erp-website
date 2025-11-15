@@ -30,25 +30,25 @@ const fadeInUp: Variants = {
 const institutions = [
   {
     name: 'Schools',
-    imageSrc: '/institutions/school.png',
+    imageSrc: '/backgrounds/schools.png', // Updated to requested background image
   },
   {
     name: 'Universities',
-    imageSrc: '/institutions/universities.jpg',
+    imageSrc: '/backgrounds/universities.png',
   },
   {
     name: "Academy's",
-    imageSrc: '/institutions/academies.jpg',
+    imageSrc: '/backgrounds/academys.png', // Corrected filename
   },
   {
     name: 'Kinder Gardens',
-    imageSrc: '/institutions/kindergartens.jpg',
+    imageSrc: '/backgrounds/kinder garden.png', // Corrected filename
   },
 ];
 
 export function InstitutionsSection() {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* --- Section Header --- */}
         <motion.div 
@@ -58,11 +58,11 @@ export function InstitutionsSection() {
           viewport={{ once: true, amount: 0.5 }}
           variants={fadeInUp}
         >
-          <p className="font-semibold text-gray-500">What We Serve</p>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold font-sans tracking-tight text-blue-900">
+            <p className="font-semibold" style={{ color: 'var(--color-muted)' }}>What We Serve</p>
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold font-sans tracking-tight" style={{ color: 'var(--color-primary)' }}>
             Tailored ERP for Every Educational Institution
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg font-serif text-muted-foreground leading-relaxed">
+          <p className="mt-4 max-w-2xl mx-auto text-lg font-serif leading-relaxed" style={{ color: 'var(--color-muted)' }}>
             Our ERP is designed to meet the unique needs of all educational institutions. From kindergarten classrooms to university campuses, we understand that education demands more than generic software.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export function InstitutionsSection() {
               
               {/* Centered Text */}
               <div className="absolute inset-0 flex items-center justify-center p-4">
-                <h3 className="text-white text-2xl font-bold font-sans text-center drop-shadow-md">
+                <h3 className="text-2xl font-bold font-sans text-center drop-shadow-md" style={{ color: '#fff' }}>
                   {item.name}
                 </h3>
               </div>

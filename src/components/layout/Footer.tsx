@@ -13,7 +13,7 @@ const imgIcon = "https://www.figma.com/api/mcp/asset/beed7847-aa38-456f-901d-697
 
 export function Footer() {
   return (
-    <footer className="bg-[#144685] text-white pt-16 pb-8 px-4">
+    <footer className="pt-16 pb-8 px-4" style={{background: 'var(--color-footer-bg)', color: 'var(--color-footer-text)'}}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10">
         {/* Column 1: Logo & Description */}
         <div className="flex flex-col gap-6">
@@ -21,7 +21,7 @@ export function Footer() {
             <Image src={imgGroup} alt="Eduegate Logo" width={159} height={30} />
             <Image src={imgE04Copy1} alt="Eduegate Icon" width={28} height={32} />
           </div>
-          <div className="text-sm font-sans">
+          <div className="text-sm font-roboto" style={{color: 'var(--color-footer-text)'}}>
             <p className="mb-0">The ultimate admin dashboard</p>
             <p className="mb-0">solution for your school</p>
             <p>management system.</p>
@@ -34,8 +34,8 @@ export function Footer() {
         </div>
         {/* Column 2: Info */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-semibold text-lg mb-2 font-sans">Info</h3>
-          <ul className="flex flex-col gap-2 text-white text-base font-sans">
+          <h3 className="font-semibold text-lg mb-2 font-lato" style={{color: 'var(--color-footer-heading)'}}>Info</h3>
+          <ul className="flex flex-col gap-2 text-base font-roboto" style={{color: 'var(--color-footer-link)'}}>
             <li><Link href="/products">Products</Link></li>
             <li><Link href="/our-service">Our Services</Link></li>
             <li><Link href="/about">About Us</Link></li>
@@ -43,15 +43,15 @@ export function Footer() {
         </div>
         {/* Column 3: Help */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-semibold text-lg mb-2 font-sans">Help</h3>
-          <ul className="flex flex-col gap-2 text-white text-base font-sans">
+          <h3 className="font-semibold text-lg mb-2 font-lato">Help</h3>
+          <ul className="flex flex-col gap-2 text-white text-base font-roboto">
             <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
         {/* Column 4: Request A Call Back */}
         <div className="flex flex-col gap-4">
-          <h3 className="font-semibold text-lg mb-2 font-sans">Request A call Back</h3>
-          <div className="text-sm font-sans mb-2">
+          <h3 className="font-semibold text-lg mb-2 font-lato">Request A call Back</h3>
+          <div className="text-sm font-roboto mb-2">
             <p className="mb-0">Our Executive will Get back</p>
             <p>to you once they Available.</p>
           </div>
@@ -73,8 +73,8 @@ export function Footer() {
       {/* Figma footer bottom bar - accurate layout */}
       <div className="bg-[#033d6e] flex items-center justify-center px-4 py-3 w-full">
         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl mx-auto">
-          <span className="text-[#d0d0d0] text-xs md:text-sm font-sans">© 2025 eduegate. All Rights Reserved.</span>
-          <div className="flex gap-6 mt-2 md:mt-0 text-[#d0d0d0] text-xs md:text-sm font-sans">
+          <span className="text-[#d0d0d0] text-xs md:text-sm font-roboto">© 2025 eduegate. All Rights Reserved.</span>
+          <div className="flex gap-6 mt-2 md:mt-0 text-[#d0d0d0] text-xs md:text-sm font-roboto">
             <a href="/terms" className="hover:underline">Terms</a>
             <a href="/privacy" className="hover:underline">Privacy Policy</a>
           </div>

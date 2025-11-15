@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="bg-white">
+    <main style={{background: 'var(--color-main-bg)', color: 'var(--color-main-text)'}}>
       <SupportSection />
       <ContactFormSection />
       <CardsSection />
