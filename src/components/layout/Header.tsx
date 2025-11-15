@@ -3,8 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Github } from 'lucide-react';
 
-const logoGroup = "https://www.figma.com/api/mcp/asset/a4b8eea5-7835-4cf6-b01e-542dae27e49f";
-const logoE04Copy1 = "https://www.figma.com/api/mcp/asset/275beabf-4202-46fa-8ebc-99c56078608d";
+const logoGroup = "/logos/eduegate Logo.svg";
 
 export function Header() {
   return (
@@ -12,7 +11,6 @@ export function Header() {
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center space-x-2">
           <Image src={logoGroup} alt="Eduegate Logo" width={159} height={30} />
-          <Image src={logoE04Copy1} alt="Eduegate Icon" width={28} height={32} />
         </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-sans font-medium">
           <Link href="/">Home</Link>

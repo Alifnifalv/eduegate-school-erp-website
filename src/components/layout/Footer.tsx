@@ -14,7 +14,7 @@ const imgIcon = "https://www.figma.com/api/mcp/asset/beed7847-aa38-456f-901d-697
 export function Footer() {
   return (
     <footer className="bg-[#144685] text-white pt-16 pb-8 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10">
         {/* Column 1: Logo & Description */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-2 mb-2">
