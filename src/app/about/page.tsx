@@ -16,10 +16,10 @@ export default function AboutPage() {
       <AboutDevelopedBySection />
       <AboutSoftopSection />
       <AboutVisionMissionCards />
-      <TestimonialsSection />
-      <VisionMissionSection />
+      {/* <TestimonialsSection /> */}
+      {/* <VisionMissionSection />
       <PlatformHighlights />
-      <AboutMapSection />
+      <AboutMapSection /> */}
     </main>
   );
 }
